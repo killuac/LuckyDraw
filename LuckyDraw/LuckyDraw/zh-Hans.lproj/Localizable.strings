@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  LuckyDraw
+
+  Created by Killua Liu on 3/17/16.
+  Copyright © 2016 Syzygy. All rights reserved.
+*/
+
+"Start" = "开始";
+"Stop" = "停止";
+"Done" = "完成";
+"Unselect" = "取消选择";
+"SelectAll" = "全部选中";
+
+"PrizeMode" = "奖品模式：奖品照片不会被移除。";
+"ParticipantMode" = "参与者模式：中奖者照片会被移除。";
+"ShakeToStart" = "手机摇一摇即可开始抽奖。";
+
+"ReloadAllPhotos" = "重新加载所有照片，开始新一轮抽奖。";
+"LongPressToTakePhoto" = "长按即可启动相机拍照。";
+
+"Photos" = "照片";
+"Camera" = "相机";
+
+"AccessPhotosSetting" = "请在系统的“设置-隐私-照片”选项中，允许”摇奖器“访问你的照片。";
+"AccessCameraSetting" = "请在系统的“设置-隐私-相机”选项中，允许”摇奖器“访问你的相机。";

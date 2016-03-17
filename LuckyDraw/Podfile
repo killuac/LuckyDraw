@@ -1,0 +1,15 @@
+platform :ios, "8.0"
+use_frameworks!
+inhibit_all_warnings!
+
+target 'LuckyDraw' do
+
+pod 'Masonry'
+pod 'Aspects'
+pod 'JSONModel'
+pod 'NYXImagesKit'
+pod 'KVOController'
+pod 'RegExCategories'
+pod 'UMengAnalytics-NO-IDFA'
+
+end

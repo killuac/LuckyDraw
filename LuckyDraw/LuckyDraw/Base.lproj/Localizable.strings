@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  LuckyDraw
+
+  Created by Killua Liu on 3/17/16.
+  Copyright © 2016 Syzygy. All rights reserved.
+*/
+
+"Start" = "Start";
+"Stop" = "Stop";
+"Done" = "Done";
+"Unselect" = "Unselect";
+"SelectAll" = "SelectAll";
+
+"PrizeMode" = "Prize Mode: Prize photo won't be removed.";
+"ParticipantMode" = "Participant Mode: The winner will be removed.";
+"ShakeToStart" = "Shake phone to start";
+
+"ReloadAllPhotos" = "Reload all photos to restart";
+"LongPressToTakePhoto" = "Long press to take a photo";
+
+"Photos" = "Photos";
+"Camera" = "Camera";
+
+"AccessPhotosSetting" = "Please allow \"Bookworm\" access your photos in your system \"Settings-Privacy-Photos\"";
+"AccessCameraSetting" = "Please allow \"Bookworm\" access your camera in your system \"Settings-Privacy-Camera\"";

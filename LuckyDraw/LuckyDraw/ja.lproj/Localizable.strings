@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  LuckyDraw
+
+  Created by Killua Liu on 3/17/16.
+  Copyright © 2016 Syzygy. All rights reserved.
+*/
+
+"Start" = "始め";
+"Stop" = "停止";
+"Done" = "完全な";
+"Unselect" = "選択を解除";
+"SelectAll" = "全て選択";
+
+"PrizeMode" = "奖品模式：奖品照片不会被移除。";
+"ParticipantMode" = "参与者模式：中奖者照片会被移除。";
+"ShakeToStart" = "手机摇一摇即可开始抽奖。";
+
+"ReloadAllPhotos" = "重新加载所有照片，开始新一轮抽奖。";
+"LongPressToTakePhoto" = "长按即可启动相机拍照。";
+
+"Photos" = "写真";
+"Camera" = "カメラ";
+
+"AccessPhotosSetting" = "どうぞシステムの“設定 - プライバシー - 写真”選択中，許す”抽選器“あなたの写真にアクセス。";
+"AccessCameraSetting" = "どうぞシステムの“設定 - プライバシー - カメラ”選択中，許す”抽選器“あなたの写真にアクセス。";
