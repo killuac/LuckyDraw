@@ -6,21 +6,26 @@
   Copyright © 2016 Syzygy. All rights reserved.
 */
 
-"Start" = "始め";
+"Okay" = "はい";
+"Cancel" = "キャンセル";
+"Settings" = "設定";
+
+"Start" = "開始";
 "Stop" = "停止";
-"Done" = "完全な";
+"Done" = "完了";
 "Unselect" = "選択を解除";
-"SelectAll" = "全て選択";
+"SelectAll" = "すべて選択";
+"TakePhoto" = "写真を撮る";
+"ChoosePhoto" = "写真を選択";
 
-"PrizeMode" = "奖品模式：奖品照片不会被移除。";
-"ParticipantMode" = "参与者模式：中奖者照片会被移除。";
-"ShakeToStart" = "手机摇一摇即可开始抽奖。";
+"PrizeMode" = "プライズモード：プライズ写真を取り除かない";
+"ParticipantMode" = "参加者モード：当選者写真を取り除く";
+"ShakeToStart" = "携帯をシェイクして、抽選を開始する";
 
-"ReloadAllPhotos" = "重新加载所有照片，开始新一轮抽奖。";
-"LongPressToTakePhoto" = "长按即可启动相机拍照。";
+"ReloadAllPhotos" = "全ての写真をリロードして、新しい抽選を開始する";
 
 "Photos" = "写真";
 "Camera" = "カメラ";
 
-"AccessPhotosSetting" = "どうぞシステムの“設定 - プライバシー - 写真”選択中，許す”抽選器“あなたの写真にアクセス。";
-"AccessCameraSetting" = "どうぞシステムの“設定 - プライバシー - カメラ”選択中，許す”抽選器“あなたの写真にアクセス。";
+"AccessPhotosSetting" = "システムオプション「設定 - プライバシー - 写真」から、「抽選器」よりあなたの写真をアクセスすることを許可します。";
+"AccessCameraSetting" = "システムオプション「設定 - プライバシー - カメラ」から、「抽選器」よりあなたのカメラをアクセルすることを許可します。";

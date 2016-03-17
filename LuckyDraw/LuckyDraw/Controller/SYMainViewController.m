@@ -7,6 +7,8 @@
 //
 
 #import "SYMainViewController.h"
+#import "SYAlbumViewController.h"
+#import "SYGroupViewController.h"
 
 @interface SYMainViewController ()
 
@@ -67,6 +69,16 @@
 }
 
 - (void)takePhoto:(id)sender
+{
+    
+}
+
+- (void)choosePhoto:(id)sender
+{
+    
+}
+
+- (void)longPressChoosePhoto:(id)sender
 {
     
 }

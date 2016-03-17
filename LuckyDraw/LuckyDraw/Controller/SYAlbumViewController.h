@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYAlbumViewController : UIViewController
+@interface SYAlbumViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end

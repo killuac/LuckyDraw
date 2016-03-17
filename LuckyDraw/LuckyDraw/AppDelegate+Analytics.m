@@ -53,6 +53,8 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
                             @{ SYLogEventName: @"MainVC_StopDraw", SYLogEventSelectorName: @"stopDraw:" },
                             @{ SYLogEventName: @"MainVC_AddPhotos", SYLogEventSelectorName: @"addPhotos:" },
                             @{ SYLogEventName: @"MainVC_TakePhoto", SYLogEventSelectorName: @"takePhoto:" },
+                            @{ SYLogEventName: @"MainVC_ChoosePhoto", SYLogEventSelectorName: @"choosePhoto:" },
+                            @{ SYLogEventName: @"MainVC_LongPressChoose", SYLogEventSelectorName: @"longPressChoosePhoto:" },
                             @{ SYLogEventName: @"MainVC_ReloadPhotos", SYLogEventSelectorName: @"reloadPhotos:" },
                             @{ SYLogEventName: @"MainVC_SlideMenu", SYLogEventSelectorName: @"slideMenu:" },
                             @{ SYLogEventName: @"MainVC_ShowDrawModes", SYLogEventSelectorName: @"showDrawModes:" }]

@@ -6,18 +6,22 @@
   Copyright © 2016 Syzygy. All rights reserved.
 */
 
+"Okay" = "OK";
+"Cancel" = "Cancel";
+"Settings" = "Settings";
 "Start" = "Start";
 "Stop" = "Stop";
 "Done" = "Done";
 "Unselect" = "Unselect";
 "SelectAll" = "SelectAll";
+"TakePhoto" = "Take Photo";
+"ChoosePhoto" = "Choose Photo";
 
-"PrizeMode" = "Prize Mode: Prize photo won't be removed.";
-"ParticipantMode" = "Participant Mode: The winner will be removed.";
+"PrizeMode" = "Prize Mode: Prize photo won't be removed";
+"ParticipantMode" = "Participant Mode: The winner will be removed";
 "ShakeToStart" = "Shake phone to start";
 
 "ReloadAllPhotos" = "Reload all photos to restart";
-"LongPressToTakePhoto" = "Long press to take a photo";
 
 "Photos" = "Photos";
 "Camera" = "Camera";

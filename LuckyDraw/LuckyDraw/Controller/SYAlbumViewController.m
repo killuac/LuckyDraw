@@ -7,7 +7,7 @@
 //
 
 #import "SYAlbumViewController.h"
-#import "SYPhotoLibrary.h"
+#import "PHPhotoLibrary+Service.h"
 
 @interface SYAlbumViewController ()
 

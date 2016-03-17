@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5DC6B06A67C93F968FFC8D41 /* Pods_LuckyDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3377A76AE23BC44A9C7B39B6 /* Pods_LuckyDraw.framework */; };
+		E390FA3A1C9AFBE4000AB558 /* SYGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */; };
+		E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */; };
+		E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Service.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */; };
+		E390FA431C9AFE60000AB558 /* UIAlertController+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA421C9AFE60000AB558 /* UIAlertController+Factory.m */; };
+		E390FA461C9B034B000AB558 /* SYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA451C9B034B000AB558 /* SYCameraViewController.m */; };
 		E3B0CB041C9A5895009950B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB031C9A5895009950B2 /* main.m */; };
 		E3B0CB071C9A5895009950B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB061C9A5895009950B2 /* AppDelegate.m */; };
 		E3B0CB0D1C9A5895009950B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B0CB0B1C9A5895009950B2 /* Main.storyboard */; };
@@ -38,7 +43,6 @@
 		E3B0CB971C9A85FD009950B2 /* SYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB961C9A85FD009950B2 /* SYAlbumCollectionViewCell.m */; };
 		E3B0CB9A1C9A86F3009950B2 /* SYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB991C9A86F3009950B2 /* SYTableViewCell.m */; };
 		E3B0CB9D1C9A8733009950B2 /* UIToolbar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB9C1C9A8733009950B2 /* UIToolbar+Factory.m */; };
-		E3B0CBA31C9AA2C9009950B2 /* SYPhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA21C9AA2C9009950B2 /* SYPhotoLibrary.m */; };
 		E3B0CBA61C9AC7B8009950B2 /* PHAsset+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */; };
 		E3B0CBA91C9AC970009950B2 /* PHAssetCollection+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */; };
 /* End PBXBuildFile section */
@@ -64,6 +68,16 @@
 		3377A76AE23BC44A9C7B39B6 /* Pods_LuckyDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D147816BD0E4349B60A539F /* Pods-LuckyDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDraw/Pods-LuckyDraw.release.xcconfig"; sourceTree = "<group>"; };
 		A09BBCA75A653D2E2FB776CA /* Pods-LuckyDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDraw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDraw/Pods-LuckyDraw.debug.xcconfig"; sourceTree = "<group>"; };
+		E390FA381C9AFBE4000AB558 /* SYGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGroupViewController.h; sourceTree = "<group>"; };
+		E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupViewController.m; sourceTree = "<group>"; };
+		E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGroupModel.h; sourceTree = "<group>"; };
+		E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupModel.m; sourceTree = "<group>"; };
+		E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+Service.h"; sourceTree = "<group>"; };
+		E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+Service.m"; sourceTree = "<group>"; };
+		E390FA411C9AFE60000AB558 /* UIAlertController+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Factory.h"; sourceTree = "<group>"; };
+		E390FA421C9AFE60000AB558 /* UIAlertController+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Factory.m"; sourceTree = "<group>"; };
+		E390FA441C9B034B000AB558 /* SYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCameraViewController.h; sourceTree = "<group>"; };
+		E390FA451C9B034B000AB558 /* SYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCameraViewController.m; sourceTree = "<group>"; };
 		E3B0CAFF1C9A5895009950B2 /* LuckyDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B0CB031C9A5895009950B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3B0CB051C9A5895009950B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,11 +92,8 @@
 		E3B0CB231C9A5895009950B2 /* LuckyDrawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuckyDrawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B0CB271C9A5895009950B2 /* LuckyDrawUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuckyDrawUITests.m; sourceTree = "<group>"; };
 		E3B0CB291C9A5895009950B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3B0CB351C9A5930009950B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		E3B0CB361C9A5930009950B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		E3B0CB371C9A5934009950B2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		E3B0CB381C9A5934009950B2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		E3B0CB391C9A593C009950B2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		E3B0CB3A1C9A593C009950B2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E3B0CB481C9A5BAB009950B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E3B0CB4A1C9A5BAD009950B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -137,8 +148,6 @@
 		E3B0CB991C9A86F3009950B2 /* SYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewCell.m; sourceTree = "<group>"; };
 		E3B0CB9B1C9A8733009950B2 /* UIToolbar+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+Factory.h"; sourceTree = "<group>"; };
 		E3B0CB9C1C9A8733009950B2 /* UIToolbar+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+Factory.m"; sourceTree = "<group>"; };
-		E3B0CBA11C9AA2C9009950B2 /* SYPhotoLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPhotoLibrary.h; sourceTree = "<group>"; };
-		E3B0CBA21C9AA2C9009950B2 /* SYPhotoLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPhotoLibrary.m; sourceTree = "<group>"; };
 		E3B0CBA41C9AC7B8009950B2 /* PHAsset+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+Model.h"; sourceTree = "<group>"; };
 		E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Model.m"; sourceTree = "<group>"; };
 		E3B0CBA71C9AC970009950B2 /* PHAssetCollection+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+Model.h"; sourceTree = "<group>"; };
@@ -270,6 +279,8 @@
 				E3B0CB581C9A5EF6009950B2 /* NSDate+Utility.m */,
 				E3B0CB881C9A66D4009950B2 /* NSString+Utility.h */,
 				E3B0CB891C9A66D4009950B2 /* NSString+Utility.m */,
+				E390FA411C9AFE60000AB558 /* UIAlertController+Factory.h */,
+				E390FA421C9AFE60000AB558 /* UIAlertController+Factory.m */,
 				E3B0CB591C9A5EF6009950B2 /* UIBarButtonItem+Factory.h */,
 				E3B0CB5A1C9A5EF6009950B2 /* UIBarButtonItem+Factory.m */,
 				E3B0CB5B1C9A5EF6009950B2 /* UIButton+Factory.h */,
@@ -310,6 +321,10 @@
 			children = (
 				E3B0CB921C9A7690009950B2 /* SYAlbumViewController.h */,
 				E3B0CB931C9A7690009950B2 /* SYAlbumViewController.m */,
+				E390FA441C9B034B000AB558 /* SYCameraViewController.h */,
+				E390FA451C9B034B000AB558 /* SYCameraViewController.m */,
+				E390FA381C9AFBE4000AB558 /* SYGroupViewController.h */,
+				E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */,
 				E3B0CB7A1C9A6309009950B2 /* SYMainViewController.h */,
 				E3B0CB7B1C9A6309009950B2 /* SYMainViewController.m */,
 			);
@@ -327,8 +342,10 @@
 				E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */,
 				E3B0CBA71C9AC970009950B2 /* PHAssetCollection+Model.h */,
 				E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */,
-				E3B0CBA11C9AA2C9009950B2 /* SYPhotoLibrary.h */,
-				E3B0CBA21C9AA2C9009950B2 /* SYPhotoLibrary.m */,
+				E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Service.h */,
+				E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */,
+				E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */,
+				E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,11 +433,13 @@
 		E3B0CAF71C9A5895009950B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Syzygy;
 				TargetAttributes = {
 					E3B0CAFE1C9A5895009950B2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4AGG3RNQPH;
 					};
 					E3B0CB171C9A5895009950B2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -540,19 +559,21 @@
 				E3B0CB8A1C9A66D4009950B2 /* NSString+Utility.m in Sources */,
 				E3B0CB801C9A6309009950B2 /* SYMainViewController.m in Sources */,
 				E3B0CB691C9A5EF6009950B2 /* NSDate+Utility.m in Sources */,
+				E390FA431C9AFE60000AB558 /* UIAlertController+Factory.m in Sources */,
 				E3B0CB6B1C9A5EF6009950B2 /* UIButton+Factory.m in Sources */,
 				E3B0CB6D1C9A5EF6009950B2 /* UIFont+Factory.m in Sources */,
 				E3B0CB9A1C9A86F3009950B2 /* SYTableViewCell.m in Sources */,
 				E3B0CB971C9A85FD009950B2 /* SYAlbumCollectionViewCell.m in Sources */,
+				E390FA461C9B034B000AB558 /* SYCameraViewController.m in Sources */,
 				E3B0CB6E1C9A5EF6009950B2 /* UILabel+Factory.m in Sources */,
 				E3B0CB941C9A7690009950B2 /* SYAlbumViewController.m in Sources */,
-				E3B0CBA31C9AA2C9009950B2 /* SYPhotoLibrary.m in Sources */,
 				E3B0CB7E1C9A6309009950B2 /* SYSoundPlayer.m in Sources */,
 				E3B0CB861C9A6349009950B2 /* NSArray+Model.m in Sources */,
 				E3B0CBA91C9AC970009950B2 /* PHAssetCollection+Model.m in Sources */,
 				E3B0CB071C9A5895009950B2 /* AppDelegate.m in Sources */,
 				E3B0CB851C9A6349009950B2 /* JSONModel+Utility.m in Sources */,
 				E3B0CB6A1C9A5EF6009950B2 /* UIBarButtonItem+Factory.m in Sources */,
+				E390FA3A1C9AFBE4000AB558 /* SYGroupViewController.m in Sources */,
 				E3B0CB711C9A5EF6009950B2 /* UIView+Utility.m in Sources */,
 				E3B0CB911C9A7536009950B2 /* AppDelegate+Analytics.m in Sources */,
 				E3B0CB7F1C9A6309009950B2 /* SYUtility.m in Sources */,
@@ -563,6 +584,8 @@
 				E3B0CB9D1C9A8733009950B2 /* UIToolbar+Factory.m in Sources */,
 				E3B0CB041C9A5895009950B2 /* main.m in Sources */,
 				E3B0CB701C9A5EF6009950B2 /* UIView+Frame.m in Sources */,
+				E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */,
+				E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,9 +625,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E3B0CB0C1C9A5895009950B2 /* Base */,
-				E3B0CB351C9A5930009950B2 /* zh-Hans */,
-				E3B0CB371C9A5934009950B2 /* zh-Hant */,
-				E3B0CB391C9A593C009950B2 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -732,6 +752,7 @@
 			baseConfigurationReference = A09BBCA75A653D2E2FB776CA /* Pods-LuckyDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LuckyDraw/Prefix.pch;
 				INFOPLIST_FILE = LuckyDraw/Info.plist;
@@ -748,6 +769,7 @@
 			baseConfigurationReference = 4D147816BD0E4349B60A539F /* Pods-LuckyDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LuckyDraw/Prefix.pch;
 				INFOPLIST_FILE = LuckyDraw/Info.plist;

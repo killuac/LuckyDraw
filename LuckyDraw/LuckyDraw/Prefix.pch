@@ -34,6 +34,7 @@
 #import "UIBarButtonItem+Factory.h"
 #import "UIToolbar+Factory.h"
 #import "UITableViewCell+Common.h"
+#import "UIAlertController+Factory.h"
 
 #import "MobClick.h"
 #import "JSONModel+Utility.h"

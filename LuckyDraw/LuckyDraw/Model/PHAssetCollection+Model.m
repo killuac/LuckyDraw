@@ -38,7 +38,7 @@
     return self.fetchResult.count;
 }
 
-- (NSMutableArray<PHAsset *> *)assets
+- (NSArray<PHAsset *> *)assets
 {
     NSMutableArray *assetArray = [NSMutableArray array];
     [self.fetchResult enumerateObjectsUsingBlock:^(PHAsset * _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {

@@ -9,18 +9,22 @@
 #ifndef SYLocalizableConstant_h
 #define SYLocalizableConstant_h
 
+#define BUTTON_TITLE_OKAY               SYLocalizedString(@"Okay")
+#define BUTTON_TITLE_CANCEL             SYLocalizedString(@"Cancel")
+#define BUTTON_TITLE_SETTING            SYLocalizedString(@"Settings")
 #define BUTTON_TITLE_START              SYLocalizedString(@"Start")
 #define BUTTON_TITLE_STOP               SYLocalizedString(@"Stop")
 #define BUTTON_TITLE_DONE               SYLocalizedString(@"Done")
 #define BUTTON_TITLE_UNSELECT           SYLocalizedString(@"Unselect")
 #define BUTTON_TITLE_SELECT_ALL         SYLocalizedString(@"SelectAll")
+#define BUTTON_TITLE_TAKE_PHOTO         SYLocalizedString(@"TakePhoto")
+#define BUTTON_TITLE_CHOOSE_PHOTO       SYLocalizedString(@"ChoosePhoto")
 
 #define HUD_PRIZE_MODE                  SYLocalizedString(@"PrizeMode")
 #define HUD_PARTICIPANT_MODE            SYLocalizedString(@"ParticipantMode")
 #define HUD_SHAKE_TO_START              SYLocalizedString(@"ShakeToStart")
 
 #define TIP_RELOAD_ALL_PHOTOS           SYLocalizedString(@"ReloadAllPhotos")
-#define HUD_LONG_PRESS_TO_TAKE_PHOTO    SYLocalizedString(@"LongPressToTakePhoto")
 
 #define TITLE_PHOTOS                    SYLocalizedString(@"Photos")
 #define TITLE_CAMERA                    SYLocalizedString(@"Camera")
