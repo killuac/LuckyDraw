@@ -14,6 +14,7 @@
 + (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message actions:(NSArray<UIAlertAction *> *)actions;
 
 + (instancetype)actionSheetControllerWithActions:(NSArray<UIAlertAction *> *)actions;
++ (instancetype)actionSheetControllerWithButtons:(NSArray<UIButton *> *)buttons;
 
 - (void)show;
 

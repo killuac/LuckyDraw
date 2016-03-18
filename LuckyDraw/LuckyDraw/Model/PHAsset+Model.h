@@ -12,6 +12,8 @@ typedef void (^SYAssetBlockType)(UIImage *image, NSDictionary *info);
 
 @interface PHAsset (Model)
 
+@property (nonatomic, assign) BOOL isSelected;
+
 - (void)thumbnailImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(SYAssetBlockType)resultHandler;
 - (void)originalImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(SYAssetBlockType)resultHandler;
 

@@ -7,7 +7,7 @@
 //
 
 #import "SYMainViewController.h"
-#import "SYAlbumViewController.h"
+#import "SYImagePickerController.h"
 #import "SYGroupViewController.h"
 
 @interface SYMainViewController ()
@@ -27,7 +27,8 @@
 
 - (void)addSubviews
 {
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:nil];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.view addSubview:self.collectionView];

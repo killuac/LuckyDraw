@@ -15,4 +15,9 @@
     return self.assetLocalIdentifiers.count;
 }
 
++ (NSArray *)fetchAllGroups
+{
+    return nil;
+}
+
 @end

@@ -8,12 +8,6 @@
 
 #import "PHAssetCollection+Model.h"
 
-@interface PHAssetCollection ()
-
-@property (nonatomic, strong) PHFetchResult *fetchResult;
-
-@end
-
 @implementation PHAssetCollection (Model)
 
 - (void)setFetchResult:(PHFetchResult *)fetchResult

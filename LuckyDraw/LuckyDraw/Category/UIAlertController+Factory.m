@@ -34,6 +34,23 @@
     return AC;
 }
 
++ (instancetype)actionSheetControllerWithButtons:(NSArray<UIButton *> *)buttons
+{
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *empty = [UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertController *AC = [UIAlertController actionSheetControllerWithActions:@[empty, cancel]];
+    [AC.view.subviews setValue:@(YES) forKey:@"hidden"];
+    
+    SYStackView *stackView = [[SYStackView alloc] initWithFrame:CGRectZero];
+    stackView.backgroundColor = [UIColor whiteColor];
+    stackView.size = CGSizeMake(AC.view.width, 80);
+    stackView.origin = CGPointMake(-MEDIUM_MARGIN, 52);
+    [stackView addSubviews:buttons];
+    [AC.view addSubview:stackView];
+    
+    return AC;
+}
+
 - (void)show
 {
     [self.visibleViewController presentViewController:self animated:YES completion:nil];

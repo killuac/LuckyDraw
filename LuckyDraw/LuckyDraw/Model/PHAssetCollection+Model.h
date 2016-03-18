@@ -11,6 +11,7 @@
 
 @interface PHAssetCollection (Model)
 
+@property (nonatomic, strong) PHFetchResult *fetchResult;
 @property (nonatomic, assign, readonly) NSUInteger assetCount;
 @property (nonatomic, strong, readonly) NSArray<PHAsset *> *assets;
 

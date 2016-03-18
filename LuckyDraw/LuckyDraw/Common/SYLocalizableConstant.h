@@ -28,6 +28,7 @@
 
 #define TITLE_PHOTOS                    SYLocalizedString(@"Photos")
 #define TITLE_CAMERA                    SYLocalizedString(@"Camera")
+#define TITLE_SELECTED_PHOTO_COUNT      SYLocalizedString(@"SelectedPhotoCount")
 
 #define MSG_ACCESS_PHOTOS_SETTING       SYLocalizedString(@"AccessPhotosSetting")
 #define MSG_ACCESS_CAMERA_SETTING       SYLocalizedString(@"AccessCameraSetting")

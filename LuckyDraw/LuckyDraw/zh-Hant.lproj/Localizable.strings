@@ -26,6 +26,7 @@
 
 "Photos" = "照片";
 "Camera" = "相機";
+"SelectedPhotoCount" = "已選取%tu張照片";
 
 "AccessPhotosSetting" = "請在系統的「設定-隱私權-照片」選項中，允許「搖獎器」訪問你的照片。";
 "AccessCameraSetting" = "請在系統的「設定-隱私權-相機」選項中，允許「搖獎器」訪問你的相機。";

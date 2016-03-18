@@ -12,6 +12,6 @@
 
 + (void)checkAuthorization:(SYNoParameterBlockType)completion;
 
-- (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *))completion;
+- (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *assetCollections))completion;
 
 @end

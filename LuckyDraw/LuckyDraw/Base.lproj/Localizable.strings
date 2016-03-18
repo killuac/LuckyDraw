@@ -17,14 +17,15 @@
 "TakePhoto" = "Take Photo";
 "ChoosePhoto" = "Choose Photo";
 
-"PrizeMode" = "Prize Mode: Prize photo won't be removed";
-"ParticipantMode" = "Participant Mode: The winner will be removed";
+"PrizeMode" = "Prize Mode: The prize photo won't be removed";
+"ParticipantMode" = "Participant Mode: The winner's photo will be removed";
 "ShakeToStart" = "Shake phone to start";
 
 "ReloadAllPhotos" = "Reload all photos to restart";
 
 "Photos" = "Photos";
 "Camera" = "Camera";
+"SelectedPhotoCount" = "%tu Photos Selected";
 
-"AccessPhotosSetting" = "Please allow \"Bookworm\" access your photos in your system \"Settings-Privacy-Photos\"";
-"AccessCameraSetting" = "Please allow \"Bookworm\" access your camera in your system \"Settings-Privacy-Camera\"";
+"AccessPhotosSetting" = "Please allow Bookworm access your photos in your system Settings-Privacy-Photos";
+"AccessCameraSetting" = "Please allow Bookworm access your camera in your system Settings-Privacy-Camera";
