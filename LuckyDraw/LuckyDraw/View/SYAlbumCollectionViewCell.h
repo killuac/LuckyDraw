@@ -1,5 +1,5 @@
 //
-//  SYPhotoCollectionViewCell.h
+//  SYAlbumCollectionViewCell.h
 //  LuckyDraw
 //
 //  Created by Killua Liu on 3/18/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYPhotoCollectionViewCell : UICollectionViewCell
+@interface SYAlbumCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong, readonly) UIImageView *imageView;
 @property (nonatomic, strong, readonly) UIImageView *checkmark;

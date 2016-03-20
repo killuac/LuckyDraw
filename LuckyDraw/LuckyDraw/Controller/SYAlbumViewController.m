@@ -7,7 +7,7 @@
 //
 
 #import "SYAlbumViewController.h"
-#import "SYPhotoCollectionViewCell.h"
+#import "SYAlbumCollectionViewCell.h"
 
 @interface SYAlbumViewController ()
 
@@ -32,7 +32,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, DEFAULT_TOOLBAR_HEIGHT, 0);
-    [self.collectionView registerClass:[SYPhotoCollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON];
+    [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -43,7 +43,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SYPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON forIndexPath:indexPath];
+    SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON forIndexPath:indexPath];
     return cell;
 }
 
