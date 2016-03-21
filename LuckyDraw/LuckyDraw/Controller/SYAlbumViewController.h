@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PHPhotoLibrary+Service.h"
 
+@class SYImagePickerController;
+
 @interface SYAlbumViewController : UICollectionViewController
 
-@property (nonatomic, strong) UIPageViewController *pageViewController;
++ (instancetype)albumViewControllerWithPageIndex:(NSUInteger)index assetCollection:(PHAssetCollection *)collection imagePicker:(SYImagePickerController *)picker;
 
-@property (nonatomic, assign) NSUInteger pageIndex;
-@property (nonatomic, strong) PHAssetCollection *assetCollection;
+@property (nonatomic, assign, readonly) NSUInteger pageIndex;
 
 @end

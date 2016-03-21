@@ -8,14 +8,33 @@
 
 #import "SYAlbumViewController.h"
 #import "SYAlbumCollectionViewCell.h"
+#import "SYImagePickerController.h"
 
 @interface SYAlbumViewController ()
 
+@property (nonatomic, strong) PHAssetCollection *assetCollection;
 @property (nonatomic, strong) NSArray *assets;
+
+@property (nonatomic, strong) SYImagePickerController *imagePicker;
 
 @end
 
 @implementation SYAlbumViewController
+
++ (instancetype)albumViewControllerWithPageIndex:(NSUInteger)index assetCollection:(PHAssetCollection *)collection imagePicker:(SYImagePickerController *)picker
+{
+    return [[self alloc] initWithPageIndex:index assetCollection:collection imagePicker:picker];
+}
+
+- (instancetype)initWithPageIndex:(NSUInteger)index assetCollection:(PHAssetCollection *)collection imagePicker:(SYImagePickerController *)picker
+{
+    if (self = [super init]) {
+        _pageIndex = index;
+        _assetCollection = collection;
+        _imagePicker = picker;
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {

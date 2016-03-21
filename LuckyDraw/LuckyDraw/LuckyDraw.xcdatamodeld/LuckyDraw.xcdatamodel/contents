@@ -3,13 +3,15 @@
     <entity name="Group" representedClassName="" syncable="YES">
         <attribute name="creationDate" attributeType="Date" syncable="YES"/>
         <attribute name="groupID" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="group" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <entity name="Photo" syncable="YES">
         <attribute name="groupID" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="localIdentifier" attributeType="String" syncable="YES"/>
+        <relationship name="group" maxCount="1" deletionRule="No Action" destinationEntity="Group" inverseName="photos" inverseEntity="Group" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Group" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Photo" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="Group" positionX="-279" positionY="-82" width="128" height="88"/>
+        <element name="Photo" positionX="-54" positionY="9" width="128" height="88"/>
     </elements>
 </model>

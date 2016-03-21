@@ -12,8 +12,7 @@
 @interface SYImagePickerController ()
 
 @property (nonatomic, strong, readonly) PHPhotoLibrary *photoLibrary;
-@property (nonatomic, strong) NSArray *assetCollections;
-@property (nonatomic, strong) NSArray *viewControllers;
+@property (nonatomic, strong) NSMutableArray *viewControllers;
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, strong) UIToolbar *toolbar;
@@ -34,6 +33,14 @@
 }
 
 #pragma mark - Life cycle
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.viewControllers = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,7 +76,9 @@
 - (void)loadData
 {
     [self.photoLibrary loadAssetCollections:^(NSArray<PHAssetCollection *> *assetCollections) {
-        self.assetCollections = assetCollections;
+        [assetCollections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [_viewControllers addObject:[SYAlbumViewController albumViewControllerWithPageIndex:idx assetCollection:obj imagePicker:self]];
+        }];
     }];
     
     [self.photoLibrary registerChangeObserver:self];
