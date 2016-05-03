@@ -45,7 +45,6 @@
 		E3B0CBA61C9AC7B8009950B2 /* PHAsset+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */; };
 		E3B0CBA91C9AC970009950B2 /* PHAssetCollection+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */; };
 		E3B1CF621C9BB972008F738C /* SYStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF611C9BB972008F738C /* SYStackView.m */; };
-		E3B1CF651C9BBD3D008F738C /* LuckyDraw.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF631C9BBD3D008F738C /* LuckyDraw.xcdatamodeld */; };
 		E3B1CF6A1C9C0062008F738C /* SYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */; };
 		E3B1CF6D1C9C19E6008F738C /* SYAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */; };
 /* End PBXBuildFile section */
@@ -155,7 +154,6 @@
 		E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+Model.m"; sourceTree = "<group>"; };
 		E3B1CF601C9BB972008F738C /* SYStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYStackView.h; sourceTree = "<group>"; };
 		E3B1CF611C9BB972008F738C /* SYStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYStackView.m; sourceTree = "<group>"; };
-		E3B1CF641C9BBD3D008F738C /* LuckyDraw.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LuckyDraw.xcdatamodel; sourceTree = "<group>"; };
 		E3B1CF661C9BE1FD008F738C /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		E3B1CF681C9C0062008F738C /* SYAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlbumCollectionViewCell.h; sourceTree = "<group>"; };
 		E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlbumCollectionViewCell.m; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				E3B0CB0E1C9A5895009950B2 /* Assets.xcassets */,
 				E3B0CB0B1C9A5895009950B2 /* Main.storyboard */,
 				E3B0CB101C9A5895009950B2 /* LaunchScreen.storyboard */,
-				E3B1CF631C9BBD3D008F738C /* LuckyDraw.xcdatamodeld */,
 				E3B0CB8E1C9A6985009950B2 /* Images */,
 				E3B0CB021C9A5895009950B2 /* Supporting Files */,
 			);
@@ -576,7 +573,6 @@
 				E3B1CF6D1C9C19E6008F738C /* SYAlbumViewController.m in Sources */,
 				E3B0CB691C9A5EF6009950B2 /* NSDate+Utility.m in Sources */,
 				E390FA431C9AFE60000AB558 /* UIAlertController+Factory.m in Sources */,
-				E3B1CF651C9BBD3D008F738C /* LuckyDraw.xcdatamodeld in Sources */,
 				E3B0CB6B1C9A5EF6009950B2 /* UIButton+Factory.m in Sources */,
 				E3B0CB6D1C9A5EF6009950B2 /* UIFont+Factory.m in Sources */,
 				E3B0CB9A1C9A86F3009950B2 /* SYTableViewCell.m in Sources */,
@@ -887,19 +883,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E3B1CF631C9BBD3D008F738C /* LuckyDraw.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E3B1CF641C9BBD3D008F738C /* LuckyDraw.xcdatamodel */,
-			);
-			currentVersion = E3B1CF641C9BBD3D008F738C /* LuckyDraw.xcdatamodel */;
-			path = LuckyDraw.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E3B0CAF71C9A5895009950B2 /* Project object */;
 }

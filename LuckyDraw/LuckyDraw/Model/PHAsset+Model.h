@@ -7,6 +7,7 @@
 //
 
 #import <Photos/Photos.h>
+@import CoreData;
 
 typedef void (^SYAssetBlockType)(UIImage *image, NSDictionary *info);
 
