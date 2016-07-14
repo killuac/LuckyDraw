@@ -11,7 +11,7 @@
 
 @implementation PHPhotoLibrary (Service)
 
-+ (void)checkAuthorization:(SYNoParameterBlockType)completion
++ (void)checkAuthorization:(SYVoidBlockType)completion
 {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (PHAuthorizationStatusNotDetermined == status) {
@@ -23,7 +23,7 @@
     }
 }
 
-+ (void)checkPhotoLibraryWithStatus:(NSInteger)status completion:(SYNoParameterBlockType)completion
++ (void)checkPhotoLibraryWithStatus:(NSInteger)status completion:(SYVoidBlockType)completion
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         if (PHAuthorizationStatusAuthorized == status) {
@@ -41,7 +41,8 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }];
     
-    [[UIAlertController alertControllerWithTitle:TITLE_PHOTOS message:MSG_ACCESS_PHOTOS_SETTING actions:@[setting, cancel]] show];
+    NSString *message = [NSString localizedStringWithFormat:MSG_ACCESS_PHOTOS_SETTING, [APP_DISPLAY_NAME quotedString], [PATH_PHOTOS_SETTING quotedString]];
+    [[UIAlertController alertControllerWithTitle:TITLE_PHOTOS message:message actions:@[setting, cancel]] show];
 }
 
 - (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *))completion

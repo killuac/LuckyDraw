@@ -9,7 +9,6 @@
 "Okay" = "はい";
 "Cancel" = "キャンセル";
 "Settings" = "設定";
-
 "Start" = "開始";
 "Stop" = "停止";
 "Done" = "完了";
@@ -26,7 +25,10 @@
 
 "Photos" = "写真";
 "Camera" = "カメラ";
-"SelectedPhotoCount" = "選択中の写真%tu枚";
+"SelectedPhotoCount" = "選択中の写真%lu枚";
 
-"AccessPhotosSetting" = "システムオプション「設定 - プライバシー - 写真」から、「抽選器」よりあなたの写真をアクセスすることを許可します。";
-"AccessCameraSetting" = "システムオプション「設定 - プライバシー - カメラ」から、「抽選器」よりあなたのカメラをアクセルすることを許可します。";
+"AccessPhotosSetting" = "システムオプション%2$@から、%1$@よりあなたの写真をアクセスすることを許可します。";
+"AccessCameraSetting" = "システムオプション%2$@から、%1$@よりあなたのカメラをアクセルすることを許可します。";
+
+"PhotosSettingPath" = "設定 - プライバシー - 写真";
+"CameraSettingPath" = "設定 - プライバシー - カメラ";

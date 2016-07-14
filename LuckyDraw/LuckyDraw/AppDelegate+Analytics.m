@@ -19,7 +19,7 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) NSDictionary *configs;
+@property (nonatomic, strong) NSMutableDictionary *configs;
 
 @end
 
@@ -34,39 +34,19 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 - (void)setupUMeng
 {
-    NSString *appKey = @"";
+    UMConfigInstance.appKey = @"";
 #if DEBUG
-    [MobClick startWithAppkey:appKey reportPolicy:REALTIME channelId:@"Development"];
+    UMConfigInstance.channelId = @"Development";
 #else
-    [MobClick startWithAppkey:appKey reportPolicy:BATCH channelId:@"App Store"];
+    UMConfigInstance.channelId = @"App Store";
 #endif
+    [MobClick startWithConfigure:UMConfigInstance];
     [MobClick setAppVersion:XcodeAppVersion];
 }
 
 - (void)loadConfiguration
 {
-    self.configs = @{
-            @"SYMainViewController": @{
-                    SYLogTrackedEvents: @[
-                            @{ SYLogEventName: @"MainVC_ShakeStart", SYLogEventSelectorName: @"shakeToStart:" },
-                            @{ SYLogEventName: @"MainVC_StartDraw", SYLogEventSelectorName: @"startDraw:" },
-                            @{ SYLogEventName: @"MainVC_StopDraw", SYLogEventSelectorName: @"stopDraw:" },
-                            @{ SYLogEventName: @"MainVC_AddPhotos", SYLogEventSelectorName: @"addPhotos:" },
-                            @{ SYLogEventName: @"MainVC_TakePhoto", SYLogEventSelectorName: @"takePhoto:" },
-                            @{ SYLogEventName: @"MainVC_ChoosePhoto", SYLogEventSelectorName: @"choosePhoto:" },
-                            @{ SYLogEventName: @"MainVC_LongPressChoose", SYLogEventSelectorName: @"longPressChoosePhoto:" },
-                            @{ SYLogEventName: @"MainVC_ReloadPhotos", SYLogEventSelectorName: @"reloadPhotos:" },
-                            @{ SYLogEventName: @"MainVC_SlideMenu", SYLogEventSelectorName: @"slideMenu:" },
-                            @{ SYLogEventName: @"MainVC_ShowDrawModes", SYLogEventSelectorName: @"showDrawModes:" }]
-                    },
-            @"SYAlbumViewController": @{
-                    SYLogTrackedEvents: @[
-                            @{ SYLogEventName: @"AlbumVC_AddPhotoCompletion", SYLogEventSelectorName: @"addPhotoCompletion:" },
-                            @{ SYLogEventName: @"AlbumVC_CloseAlbum", SYLogEventSelectorName: @"closeAlbum:" },
-                            @{ SYLogEventName: @"AlbumVC_UnselectPhotos", SYLogEventSelectorName: @"unselectPhotos:" },
-                            @{ SYLogEventName: @"AlbumVC_SelectAllPhotos", SYLogEventSelectorName: @"selectAllPhotos:" }]
-                    }
-            };
+    self.configs = [NSMutableDictionary dictionaryWithContentsOfURL:SYPlistFileURL(@"Analytics")];
 }
 
 - (void)setConfigs:(NSDictionary *)configs
@@ -84,6 +64,10 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 {
     NSString *className = NSStringFromClass([aspectInfo.instance class]);
     NSString *pageViewName = self.configs[className][SYLogPageViewName];
+    
+    if (pageViewName && ![className isEqualToString:pageViewName]) {
+        NSLog(@"Analytics Warning: Page view name(%@) should be same with class name(%@)", pageViewName, className);
+    }
     
     return (pageViewName ? pageViewName : className);
 }

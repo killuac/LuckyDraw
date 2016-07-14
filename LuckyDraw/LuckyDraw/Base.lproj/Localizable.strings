@@ -25,7 +25,9 @@
 
 "Photos" = "Photos";
 "Camera" = "Camera";
-"SelectedPhotoCount" = "%tu Photos Selected";
 
-"AccessPhotosSetting" = "Please allow Bookworm access your photos in your system Settings-Privacy-Photos";
-"AccessCameraSetting" = "Please allow Bookworm access your camera in your system Settings-Privacy-Camera";
+"AccessPhotosSetting" = "Please allow %1$@ access your photos in your system %2$@";
+"AccessCameraSetting" = "Please allow %1$@ access your camera in your system %2$@";
+
+"PhotosSettingPath" = "Settings-Privacy-Photos";
+"CameraSettingPath" = "Settings-Privacy-Camera";

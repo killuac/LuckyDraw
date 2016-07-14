@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self addSubviews];
+//    [self addSubviews];
 }
 
 - (void)addSubviews

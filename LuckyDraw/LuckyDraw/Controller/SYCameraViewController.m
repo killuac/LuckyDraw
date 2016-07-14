@@ -21,7 +21,7 @@
     [self.class checkAuthorization:nil];
 }
 
-+ (void)checkAuthorization:(SYNoParameterBlockType)completion
++ (void)checkAuthorization:(SYVoidBlockType)completion
 {
     if (![self isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) return;
     
@@ -56,7 +56,8 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }];
     
-    [[UIAlertController alertControllerWithTitle:TITLE_CAMERA message:MSG_ACCESS_CAMERA_SETTING actions:@[setting, cancel]] show];
+    NSString *message = [NSString localizedStringWithFormat:MSG_ACCESS_CAMERA_SETTING, [APP_DISPLAY_NAME quotedString], [PATH_CAMERA_SETTING quotedString]];
+    [[UIAlertController alertControllerWithTitle:TITLE_CAMERA message:message actions:@[setting, cancel]] show];
 }
 
 @end

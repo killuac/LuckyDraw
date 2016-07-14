@@ -9,28 +9,31 @@
 #ifndef SYLocalizableConstant_h
 #define SYLocalizableConstant_h
 
-#define BUTTON_TITLE_OKAY               SYLocalizedString(@"Okay")
-#define BUTTON_TITLE_CANCEL             SYLocalizedString(@"Cancel")
-#define BUTTON_TITLE_SETTING            SYLocalizedString(@"Settings")
-#define BUTTON_TITLE_START              SYLocalizedString(@"Start")
-#define BUTTON_TITLE_STOP               SYLocalizedString(@"Stop")
-#define BUTTON_TITLE_DONE               SYLocalizedString(@"Done")
-#define BUTTON_TITLE_UNSELECT           SYLocalizedString(@"Unselect")
-#define BUTTON_TITLE_SELECT_ALL         SYLocalizedString(@"SelectAll")
-#define BUTTON_TITLE_TAKE_PHOTO         SYLocalizedString(@"TakePhoto")
-#define BUTTON_TITLE_CHOOSE_PHOTO       SYLocalizedString(@"ChoosePhoto")
+#define BUTTON_TITLE_OKAY               NSLocalizedString(@"Okay", "")
+#define BUTTON_TITLE_CANCEL             NSLocalizedString(@"Cancel", "")
+#define BUTTON_TITLE_SETTING            NSLocalizedString(@"Settings", "")
+#define BUTTON_TITLE_START              NSLocalizedString(@"Start", "")
+#define BUTTON_TITLE_STOP               NSLocalizedString(@"Stop", "")
+#define BUTTON_TITLE_DONE               NSLocalizedString(@"Done", "")
+#define BUTTON_TITLE_UNSELECT           NSLocalizedString(@"Unselect", "")
+#define BUTTON_TITLE_SELECT_ALL         NSLocalizedString(@"SelectAll", "")
+#define BUTTON_TITLE_TAKE_PHOTO         NSLocalizedString(@"TakePhoto", "")
+#define BUTTON_TITLE_CHOOSE_PHOTO       NSLocalizedString(@"ChoosePhoto", "")
 
-#define HUD_PRIZE_MODE                  SYLocalizedString(@"PrizeMode")
-#define HUD_PARTICIPANT_MODE            SYLocalizedString(@"ParticipantMode")
-#define HUD_SHAKE_TO_START              SYLocalizedString(@"ShakeToStart")
+#define HUD_PRIZE_MODE                  NSLocalizedString(@"PrizeMode", "")
+#define HUD_PARTICIPANT_MODE            NSLocalizedString(@"ParticipantMode", "")
+#define HUD_SHAKE_TO_START              NSLocalizedString(@"ShakeToStart", "")
 
-#define TIP_RELOAD_ALL_PHOTOS           SYLocalizedString(@"ReloadAllPhotos")
+#define TIP_RELOAD_ALL_PHOTOS           NSLocalizedString(@"ReloadAllPhotos", "")
 
-#define TITLE_PHOTOS                    SYLocalizedString(@"Photos")
-#define TITLE_CAMERA                    SYLocalizedString(@"Camera")
-#define TITLE_SELECTED_PHOTO_COUNT      SYLocalizedString(@"SelectedPhotoCount")
+#define TITLE_PHOTOS                    NSLocalizedString(@"Photos", "")
+#define TITLE_CAMERA                    NSLocalizedString(@"Camera", "")
+#define TITLE_SELECTED_PHOTO_COUNT      NSLocalizedString(@"SelectedPhotoCount", "")
 
-#define MSG_ACCESS_PHOTOS_SETTING       SYLocalizedString(@"AccessPhotosSetting")
-#define MSG_ACCESS_CAMERA_SETTING       SYLocalizedString(@"AccessCameraSetting")
+#define MSG_ACCESS_PHOTOS_SETTING       NSLocalizedString(@"AccessPhotosSetting", "")
+#define MSG_ACCESS_CAMERA_SETTING       NSLocalizedString(@"AccessCameraSetting", "")
+
+#define PATH_PHOTOS_SETTING             NSLocalizedString(@"PhotosSettingPath", "")
+#define PATH_CAMERA_SETTING             NSLocalizedString(@"CameraSettingPath", "")
 
 #endif /* SYLocalizableConstant_h */

@@ -10,6 +10,6 @@
 
 @interface SYCameraViewController : UIImagePickerController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-+ (void)checkAuthorization:(SYNoParameterBlockType)completion;
++ (void)checkAuthorization:(SYVoidBlockType)completion;
 
 @end

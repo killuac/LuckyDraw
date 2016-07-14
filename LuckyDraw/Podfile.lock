@@ -1,17 +1,15 @@
 PODS:
   - Aspects (1.4.1)
   - JSONModel (1.2.0)
-  - KVOController (1.0.3)
-  - Masonry (0.6.4)
+  - KVOController (1.1.0)
   - NYXImagesKit (2.3)
   - RegExCategories (1.0)
-  - UMengAnalytics-NO-IDFA (3.6.7)
+  - UMengAnalytics-NO-IDFA (4.0.5)
 
 DEPENDENCIES:
   - Aspects
   - JSONModel
   - KVOController
-  - Masonry
   - NYXImagesKit
   - RegExCategories
   - UMengAnalytics-NO-IDFA
@@ -19,10 +17,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
-  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  KVOController: 321b5fc59300fcaabd42c0f679baa7a27efbb2fd
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
-  UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
+  UMengAnalytics-NO-IDFA: 965a219b05475ff2a4c09a164139a27bbaa0e25b
 
 COCOAPODS: 0.39.0

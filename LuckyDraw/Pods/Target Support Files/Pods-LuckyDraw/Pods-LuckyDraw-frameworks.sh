@@ -87,7 +87,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LuckyDraw/Aspects.framework"
   install_framework "Pods-LuckyDraw/JSONModel.framework"
   install_framework "Pods-LuckyDraw/KVOController.framework"
-  install_framework "Pods-LuckyDraw/Masonry.framework"
   install_framework "Pods-LuckyDraw/NYXImagesKit.framework"
   install_framework "Pods-LuckyDraw/RegExCategories.framework"
 fi
@@ -95,7 +94,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-LuckyDraw/Aspects.framework"
   install_framework "Pods-LuckyDraw/JSONModel.framework"
   install_framework "Pods-LuckyDraw/KVOController.framework"
-  install_framework "Pods-LuckyDraw/Masonry.framework"
   install_framework "Pods-LuckyDraw/NYXImagesKit.framework"
   install_framework "Pods-LuckyDraw/RegExCategories.framework"
 fi

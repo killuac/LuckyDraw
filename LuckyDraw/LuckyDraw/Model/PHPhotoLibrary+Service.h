@@ -10,7 +10,7 @@
 
 @interface PHPhotoLibrary (Service)
 
-+ (void)checkAuthorization:(SYNoParameterBlockType)completion;
++ (void)checkAuthorization:(SYVoidBlockType)completion;
 
 - (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *assetCollections))completion;
 

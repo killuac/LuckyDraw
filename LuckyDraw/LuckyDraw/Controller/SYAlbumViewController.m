@@ -50,8 +50,8 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, DEFAULT_TOOLBAR_HEIGHT, 0);
-    [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON];
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, SYViewDefaultHeight, 0);
+    [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class])];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -62,7 +62,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER_COMMON forIndexPath:indexPath];
+    SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class]) forIndexPath:indexPath];
     return cell;
 }
 
