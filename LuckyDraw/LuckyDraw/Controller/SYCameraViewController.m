@@ -9,6 +9,10 @@
 #import "SYCameraViewController.h"
 @import AVFoundation;
 
+@interface SYCameraViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@end
+
 @implementation SYCameraViewController
 
 - (void)viewDidLoad

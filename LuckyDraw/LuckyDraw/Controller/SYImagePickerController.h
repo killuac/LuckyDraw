@@ -1,5 +1,5 @@
 //
-//  SYAlbumViewController.h
+//  SYImagePickerController.h
 //  LuckyDraw
 //
 //  Created by Killua Liu on 3/17/16.
@@ -13,11 +13,13 @@
 
 @protocol SYImagePickerControllerDelegate <NSObject>
 
+@optional
 - (void)imagePickerController:(SYImagePickerController *)picker didFinishPickingImages:(NSArray<PHAsset *> *)assets;
+- (void)imagePickerControllerDidClose:(UIImagePickerController *)picker;
 
 @end
 
 
-@interface SYImagePickerController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, PHPhotoLibraryChangeObserver>
+@interface SYImagePickerController : UIViewController
 
 @end

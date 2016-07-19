@@ -1,5 +1,5 @@
 //
-//  PHPhotoLibrary+Service.h
+//  PHPhotoLibrary+Model.h
 //  LuckyDraw
 //
 //  Created by Killua Liu on 3/17/16.
@@ -8,7 +8,7 @@
 
 #import <Photos/Photos.h>
 
-@interface PHPhotoLibrary (Service)
+@interface PHPhotoLibrary (Model)
 
 + (void)checkAuthorization:(SYVoidBlockType)completion;
 

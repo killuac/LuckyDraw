@@ -43,29 +43,9 @@
     return [UIColor colorWithRed:240/255.0 green:240/255.0 blue:244/255.0 alpha:1.0];   // 冷白
 }
 
-+ (instancetype)bookWhileBackgroundColor
++ (instancetype)darkBackgroundColor
 {
-    return [UIColor colorWithRed:251/255.0 green:251/255.0 blue:251/255.0 alpha:1.0];
-}
-
-+ (instancetype)bookYellowBackgroundColor
-{
-    return [UIColor colorWithRed:248/255.0 green:241/255.0 blue:227/255.0 alpha:1.0];
-}
-
-+ (instancetype)bookGrayBackgroundColor
-{
-    return [UIColor colorWithRed:222/255.0 green:226/255.0 blue:228/255.0 alpha:1.0];
-}
-
-+ (instancetype)bookBlackBackgroundColor
-{
-    return [UIColor colorWithRed:90/255.0 green:90/255.0 blue:92/255.0 alpha:1.0];
-}
-
-+ (instancetype)bubbleBackgroundColor
-{
-    return [UIColor colorWithRed:194/255.0 green:223/255.0 blue:232/255.0 alpha:1.0];
+    return [UIColor colorWithRed:3/255.0 green:3/255.0 blue:3/255.0 alpha:1.0];
 }
 
 #pragma mark - Text color

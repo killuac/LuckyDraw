@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PHPhotoLibrary+Service.h"
+#import "PHPhotoLibrary+Model.h"
 
 @class SYImagePickerController;
 

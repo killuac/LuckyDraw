@@ -14,11 +14,7 @@
 + (instancetype)barTintColor;
 
 + (instancetype)backgroundColor;
-+ (instancetype)bookWhileBackgroundColor;
-+ (instancetype)bookYellowBackgroundColor;
-+ (instancetype)bookGrayBackgroundColor;
-+ (instancetype)bookBlackBackgroundColor;
-+ (instancetype)bubbleBackgroundColor;
++ (instancetype)darkBackgroundColor;
 
 + (instancetype)titleColor;
 + (instancetype)subtitleColor;

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PHAsset+Model.h"
 
 @interface SYAlbumCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong, readonly) UIImageView *imageView;
 @property (nonatomic, strong, readonly) UIImageView *checkmark;
+
+- (void)configWithAsset:(PHAsset *)asset;
 
 @end

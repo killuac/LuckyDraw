@@ -9,6 +9,7 @@
 #import "SYAlbumViewController.h"
 #import "SYAlbumCollectionViewCell.h"
 #import "SYImagePickerController.h"
+#import "PHAssetCollection+Model.h"
 
 @interface SYAlbumViewController ()
 
@@ -48,21 +49,24 @@
     flowLayout.minimumInteritemSpacing = spacing;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = [UIColor darkBackgroundColor];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, SYViewDefaultHeight, 0);
     [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class])];
 }
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return self.assetCollection.assets.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class]) forIndexPath:indexPath];
+    [cell configWithAsset:self.assetCollection.assets[indexPath.row]];
+    
     return cell;
 }
 

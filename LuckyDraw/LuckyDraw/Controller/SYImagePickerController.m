@@ -1,5 +1,5 @@
 //
-//  SYAlbumViewController.m
+//  SYImagePickerController.m
 //  LuckyDraw
 //
 //  Created by Killua Liu on 3/17/16.
@@ -8,15 +8,16 @@
 
 #import "SYImagePickerController.h"
 #import "SYAlbumViewController.h"
+#import "SYSegmentControl.h"
 
-@interface SYImagePickerController ()
+@interface SYImagePickerController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, PHPhotoLibraryChangeObserver>
 
 @property (nonatomic, strong, readonly) PHPhotoLibrary *photoLibrary;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
+@property (nonatomic, strong) SYSegmentControl *segmentControl;
 @property (nonatomic, strong) UIToolbar *toolbar;
-@property (nonatomic, strong) UINavigationBar *navigationBar;
 
 @end
 
@@ -44,12 +45,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self addPageViewController];
-    [self addSubviews];
+    [self prepareForUI];
     
     [PHPhotoLibrary checkAuthorization:^{
         [self loadData];
     }];
+}
+
+- (void)prepareForUI
+{
+    [self addPageViewController];
+    [self addSubviews];
+    [self addConstraints];
 }
 
 - (void)addPageViewController
@@ -63,6 +70,7 @@
                                      completion:nil];
     self.pageViewController.delegate = self;
     self.pageViewController.dataSource = self;
+    self.pageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
@@ -70,7 +78,14 @@
 
 - (void)addSubviews
 {
+    UIBarButtonItem *closeItem = [UIBarButtonItem barButtonItemWithImageName:@"button_close" target:self action:@selector(closeAlbum:)];
+    
+    _toolbar = [UIToolbar toolbarWithItems:@[closeItem]];
+}
 
+- (void)addConstraints
+{
+    
 }
 
 - (void)loadData

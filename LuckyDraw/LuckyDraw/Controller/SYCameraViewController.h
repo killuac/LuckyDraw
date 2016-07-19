@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYCameraViewController : UIImagePickerController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface SYCameraViewController : UIImagePickerController
 
 + (void)checkAuthorization:(SYVoidBlockType)completion;
 

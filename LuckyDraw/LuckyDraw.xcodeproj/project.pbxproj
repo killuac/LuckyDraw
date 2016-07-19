@@ -29,7 +29,7 @@
 		E350B1F31D37C6E2007F663C /* UIViewController+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E350B1E21D37C6E2007F663C /* UIViewController+Base.m */; };
 		E390FA3A1C9AFBE4000AB558 /* SYGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */; };
 		E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */; };
-		E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Service.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */; };
+		E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */; };
 		E390FA461C9B034B000AB558 /* SYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA451C9B034B000AB558 /* SYCameraViewController.m */; };
 		E3A218A61D1E479D000E0217 /* UIView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A218A51D1E479D000E0217 /* UIView+Base.m */; };
 		E3B0CB041C9A5895009950B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB031C9A5895009950B2 /* main.m */; };
@@ -54,6 +54,7 @@
 		E3B1CF621C9BB972008F738C /* SYStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF611C9BB972008F738C /* SYStackView.m */; };
 		E3B1CF6A1C9C0062008F738C /* SYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */; };
 		E3B1CF6D1C9C19E6008F738C /* SYAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */; };
+		E3E1A8121D3BCA1F00E5D649 /* SYSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */; };
 		E3F9501B1D1E33D300AF5A5B /* Analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F9501A1D1E33D300AF5A5B /* Analytics.plist */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +119,8 @@
 		E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupViewController.m; sourceTree = "<group>"; };
 		E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGroupModel.h; sourceTree = "<group>"; };
 		E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupModel.m; sourceTree = "<group>"; };
-		E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+Service.h"; sourceTree = "<group>"; };
-		E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+Service.m"; sourceTree = "<group>"; };
+		E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+Model.h"; sourceTree = "<group>"; };
+		E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+Model.m"; sourceTree = "<group>"; };
 		E390FA441C9B034B000AB558 /* SYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCameraViewController.h; sourceTree = "<group>"; };
 		E390FA451C9B034B000AB558 /* SYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCameraViewController.m; sourceTree = "<group>"; };
 		E3A218A41D1E479D000E0217 /* UIView+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Base.h"; sourceTree = "<group>"; };
@@ -174,6 +175,8 @@
 		E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlbumCollectionViewCell.m; sourceTree = "<group>"; };
 		E3B1CF6B1C9C19E5008F738C /* SYAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlbumViewController.h; sourceTree = "<group>"; };
 		E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlbumViewController.m; sourceTree = "<group>"; };
+		E3E1A8101D3BCA1F00E5D649 /* SYSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSegmentControl.h; sourceTree = "<group>"; };
+		E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSegmentControl.m; sourceTree = "<group>"; };
 		E3F9501A1D1E33D300AF5A5B /* Analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Analytics.plist; sourceTree = "<group>"; };
 		F3E0C09564597F6F0F0DC9A8 /* Pods_LuckyDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69FE1952DBEB572FCEC2BC0 /* Pods-LuckyDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDraw/Pods-LuckyDraw.release.xcconfig"; sourceTree = "<group>"; };
@@ -388,8 +391,8 @@
 				E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */,
 				E3B0CBA71C9AC970009950B2 /* PHAssetCollection+Model.h */,
 				E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */,
-				E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Service.h */,
-				E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Service.m */,
+				E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */,
+				E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */,
 				E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */,
 				E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */,
 			);
@@ -401,6 +404,8 @@
 			children = (
 				E3B1CF681C9C0062008F738C /* SYAlbumCollectionViewCell.h */,
 				E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */,
+				E3E1A8101D3BCA1F00E5D649 /* SYSegmentControl.h */,
+				E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */,
 				E3B1CF601C9BB972008F738C /* SYStackView.h */,
 				E3B1CF611C9BB972008F738C /* SYStackView.m */,
 				E3B0CB981C9A86F3009950B2 /* SYTableViewCell.h */,
@@ -664,7 +669,8 @@
 				E350B1EB1D37C6E2007F663C /* UIColor+Base.m in Sources */,
 				E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */,
 				E350B1F21D37C6E2007F663C /* UIToolbar+Base.m in Sources */,
-				E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Service.m in Sources */,
+				E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */,
+				E3E1A8121D3BCA1F00E5D649 /* SYSegmentControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

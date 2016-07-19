@@ -10,7 +10,7 @@
 #import "SYImagePickerController.h"
 #import "SYGroupViewController.h"
 
-@interface SYMainViewController ()
+@interface SYMainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -22,13 +22,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self addSubviews];
+//    [self prepareForUI];
+    
+    [self.view addTapGesture];
 }
 
-- (void)addSubviews
+- (void)singleTap:(UITapGestureRecognizer *)recognizer
+{
+    SYImagePickerController *imagePicker = [[SYImagePickerController alloc] init];
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)prepareForUI
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.view addSubview:self.collectionView];

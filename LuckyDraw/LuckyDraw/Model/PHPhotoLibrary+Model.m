@@ -1,12 +1,12 @@
 //
-//  PHPhotoLibrary+Service.m
+//  PHPhotoLibrary+Model.m
 //  LuckyDraw
 //
 //  Created by Killua Liu on 3/17/16.
 //  Copyright © 2016 Syzygy. All rights reserved.
 //
 
-#import "PHPhotoLibrary+Service.h"
+#import "PHPhotoLibrary+Model.h"
 #import "PHAssetCollection+Model.h"
 
 @implementation PHPhotoLibrary (Service)
@@ -25,7 +25,7 @@
 
 + (void)checkPhotoLibraryWithStatus:(NSInteger)status completion:(SYVoidBlockType)completion
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    SYDispatchMainAsync(^{
         if (PHAuthorizationStatusAuthorized == status) {
             completion();
         } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
@@ -50,7 +50,7 @@
     NSParameterAssert(!completion);
     NSMutableArray *assetCollections = [NSMutableArray array];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    SYDispatchGlobalAsync(^{
         PHFetchOptions *options = [[PHFetchOptions alloc] init];
         options.predicate = [NSPredicate predicateWithFormat:@"estimatedAssetCount > 0"];
         
@@ -74,7 +74,7 @@
             }
         }];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        SYDispatchMainAsync(^{
             [assetCollections sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"assetCount" ascending:NO]]];
             completion(assetCollections);
         });
