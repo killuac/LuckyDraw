@@ -12,6 +12,19 @@
 
 @implementation UIViewController (Base)
 
++ (void)load
+{
+#if DEBUG
+    SYSwizzleMethod([self class], NSSelectorFromString(@"dealloc"), @selector(swizzle_dealloc), NO);
+#endif
+}
+
+- (void)swizzle_dealloc
+{
+    NSLog(@"FREE MEMORY: %@", NSStringFromClass([self class]));
+    [self swizzle_dealloc];
+}
+
 #pragma mark - Properties
 - (void)setIsLoadingData:(BOOL)isLoadingData
 {

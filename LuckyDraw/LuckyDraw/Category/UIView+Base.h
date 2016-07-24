@@ -35,6 +35,8 @@ UIKIT_EXTERN const NSTimeInterval SYViewDefaultAnimationDuration;
 
 + (instancetype)newAutoLayoutView;
 - (void)constraintsEqualWithSuperView;
+- (void)constraintsEqualWidthWithSuperView;
+- (void)constraintsEqualHeightWithSuperView;
 - (void)constraintsEqualWidthAndHeight;
 - (void)constraintsCenterInSuperview;
 - (void)constraintsCenterXWithView:(UIView *)view;

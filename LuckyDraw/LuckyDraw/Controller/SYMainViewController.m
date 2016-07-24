@@ -9,6 +9,7 @@
 #import "SYMainViewController.h"
 #import "SYImagePickerController.h"
 #import "SYGroupViewController.h"
+#import "SYSegmentControl.h"
 
 @interface SYMainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -24,7 +25,20 @@
     [super viewDidLoad];
 //    [self prepareForUI];
     
-    [self.view addTapGesture];
+//    [self.view addTapGesture];
+    self.view.backgroundColor = [[UIColor darkBackgroundColor] darkerColor];
+    
+    SYSegmentControl *segmentControl = [SYSegmentControl segmentControlWithItems:@[@"Test01", @"Test02", @"Test03", @"123456sddsaasdfsdf", @"Test06", @"Test09"]];
+    [self.view addSubview:segmentControl];
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(segmentControl);
+    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[segmentControl]|" views:views]];
+    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[segmentControl(32)]" views:views]];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)singleTap:(UITapGestureRecognizer *)recognizer

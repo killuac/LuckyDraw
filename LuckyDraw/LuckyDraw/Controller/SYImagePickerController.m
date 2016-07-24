@@ -10,7 +10,7 @@
 #import "SYAlbumViewController.h"
 #import "SYSegmentControl.h"
 
-@interface SYImagePickerController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, PHPhotoLibraryChangeObserver>
+@interface SYImagePickerController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate, PHPhotoLibraryChangeObserver>
 
 @property (nonatomic, strong, readonly) PHPhotoLibrary *photoLibrary;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
@@ -70,10 +70,21 @@
                                      completion:nil];
     self.pageViewController.delegate = self;
     self.pageViewController.dataSource = self;
+    self.pageScrollView.delegate = self;
     self.pageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
+}
+
+- (UIScrollView *)pageScrollView
+{
+    for (UIView *view in self.pageViewController.view.subviews) {
+        if ([view isKindOfClass:UIScrollView.class]) {
+            return (UIScrollView *)view;
+        }
+    }
+    return nil;
 }
 
 - (void)addSubviews

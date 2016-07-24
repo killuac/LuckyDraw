@@ -21,9 +21,7 @@
 {
     [self setupApplication];
     
-    SYMainViewController *VC = [[SYMainViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:VC];
-    self.window.rootViewController = navController;
+    self.window.rootViewController = [[SYMainViewController alloc] init];
     
     return YES;
 }

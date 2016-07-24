@@ -45,7 +45,7 @@
 
 + (instancetype)darkBackgroundColor
 {
-    return [UIColor colorWithRed:3/255.0 green:3/255.0 blue:3/255.0 alpha:1.0];
+    return [UIColor colorWithRed:35/255.0 green:35/255.0 blue:35/255.0 alpha:1.0];
 }
 
 #pragma mark - Text color

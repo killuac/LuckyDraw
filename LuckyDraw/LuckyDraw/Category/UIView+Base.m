@@ -55,6 +55,18 @@ const NSTimeInterval SYViewDefaultAnimationDuration = 0.25;
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self]|" views:views]];
 }
 
+- (void)constraintsEqualWidthWithSuperView
+{
+    NSDictionary *views = NSDictionaryOfVariableBindings(self);
+    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[self]|" views:views]];
+}
+
+- (void)constraintsEqualHeightWithSuperView
+{
+    NSDictionary *views = NSDictionaryOfVariableBindings(self);
+    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self]|" views:views]];
+}
+
 - (void)constraintsEqualWidthAndHeight
 {
     [NSLayoutConstraint activateConstraints:@[[NSLayoutConstraint constraintWithItem:self

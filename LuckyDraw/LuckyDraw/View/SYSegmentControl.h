@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYSegmentControl : UIScrollView
+@interface SYSegmentCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
+
+@end
+
+
+@class SYSegmentControl;
+@protocol SYSegmentControlDelegate <NSObject>
+
+- (void)segmentControl:(SYSegmentControl *)segmentControl didSelectSegmentAtIndex:(NSUInteger)index;
+
+@end
+
+
+@interface SYSegmentControl : UIView
+
++ (instancetype)segmentControlWithItems:(NSArray *)items;   // items can be NSStrings
+
+@property (nonatomic, weak) id <SYSegmentControlDelegate> delegate;
 
 @end

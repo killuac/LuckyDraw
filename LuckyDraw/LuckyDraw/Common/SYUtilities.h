@@ -24,6 +24,8 @@
 #define SCREEN_CENTER           CGPointMake(CGRectGetMidX(SCREEN_BOUNDS), CGRectGetMidY(SCREEN_BOUNDS))
 #define RESOLUTION_SIZE         [UIScreen mainScreen].preferredMode.size
 
+#define TVC_REUSE_IDENTIFIER    @"TableViewCellReuseIdentifier"
+#define CVC_REUSE_IDENTIFIER    @"CollectionViewCellReuseIdentifier"
 #define DECLARE_WEAK_SELF       __weak typeof(self) weakSelf = self
 
 typedef void (^SYVoidBlockType)(void);

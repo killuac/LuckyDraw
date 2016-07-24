@@ -53,7 +53,7 @@
     self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class])];
+    [self.collectionView registerClass:[SYAlbumCollectionViewCell class] forCellWithReuseIdentifier:CVC_REUSE_IDENTIFIER];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -64,7 +64,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SYAlbumCollectionViewCell class]) forIndexPath:indexPath];
+    SYAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CVC_REUSE_IDENTIFIER forIndexPath:indexPath];
     [cell configWithAsset:self.assetCollection.assets[indexPath.row]];
     
     return cell;
