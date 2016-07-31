@@ -8,13 +8,13 @@
 
 #import "AppDelegate+Analytics.h"
 
-NSString *const SYLogPageViewName = @"SYLogPageViewName";
-NSString *const SYLogTrackedEvents = @"SYLogTrackedEvents";
-NSString *const SYLogEventName = @"SYLogEventName";
-NSString *const SYLogEventSelectorName = @"SYLogEventSelectorName";
-NSString *const SYLogEventHandlerBlock = @"SYLogEventHandlerBlock";
+NSString *const KLLogPageViewName = @"KLLogPageViewName";
+NSString *const KLLogTrackedEvents = @"KLLogTrackedEvents";
+NSString *const KLLogEventName = @"KLLogEventName";
+NSString *const KLLogEventSelectorName = @"KLLogEventSelectorName";
+NSString *const KLLogEventHandlerBlock = @"KLLogEventHandlerBlock";
 
-typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
+typedef void (^KLAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 
 @interface AppDelegate ()
@@ -46,7 +46,7 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 - (void)loadConfiguration
 {
-    self.configs = [NSMutableDictionary dictionaryWithContentsOfURL:SYPlistFileURL(@"Analytics")];
+    self.configs = [NSMutableDictionary dictionaryWithContentsOfURL:KLPlistFileURL(@"Analytics")];
 }
 
 - (void)setConfigs:(NSDictionary *)configs
@@ -63,7 +63,7 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 - (NSString *)pageViewNameForAspectInfo:(id<AspectInfo>)aspectInfo
 {
     NSString *className = NSStringFromClass([aspectInfo.instance class]);
-    NSString *pageViewName = self.configs[className][SYLogPageViewName];
+    NSString *pageViewName = self.configs[className][KLLogPageViewName];
     
     if (pageViewName && ![className isEqualToString:pageViewName]) {
         NSLog(@"Analytics Warning: Page view name(%@) should be same with class name(%@)", pageViewName, className);
@@ -98,16 +98,16 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
         Class clazz = NSClassFromString(className);
         NSDictionary *config = self.configs[className];
         
-        [config[SYLogTrackedEvents] enumerateObjectsUsingBlock:^(NSDictionary *event, NSUInteger idx, BOOL *stop) {
-            SEL selector = NSSelectorFromString(event[SYLogEventSelectorName]);
-            SYAspectHandlerBlock block = event[SYLogEventHandlerBlock];
+        [config[KLLogTrackedEvents] enumerateObjectsUsingBlock:^(NSDictionary *event, NSUInteger idx, BOOL *stop) {
+            SEL selector = NSSelectorFromString(event[KLLogEventSelectorName]);
+            KLAspectHandlerBlock block = event[KLLogEventHandlerBlock];
             
             [clazz aspect_hookSelector:selector withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     if (block) {
                         block(aspectInfo);
                     } else {
-                        [MobClick event:event[SYLogEventName]];
+                        [MobClick event:event[KLLogEventName]];
                     }
                 });
             } error:NULL];
@@ -117,7 +117,7 @@ typedef void (^SYAspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 - (BOOL)isNeedLoggingForAspectInfo:(id<AspectInfo>)aspectInfo
 {
-    return ([NSStringFromClass([aspectInfo.instance class]) hasPrefix:@"SY"]);
+    return ([NSStringFromClass([aspectInfo.instance class]) hasPrefix:@"KL"]);
 }
 
 @end

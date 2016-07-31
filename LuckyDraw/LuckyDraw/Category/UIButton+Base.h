@@ -8,28 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, SYButonStyle) {
-    SYButonStyleNone,
-    SYButonStyleDefault,
-    SYButonStylePrimary,
-    SYButonStyleDestructive
+typedef NS_ENUM(NSUInteger, KLButonStyle) {
+    KLButonStyleNone,
+    KLButonStyleDefault,
+    KLButonStylePrimary,
+    KLButonStyleDestructive
 };
 
-typedef NS_ENUM(NSUInteger, SYButtonLayout) {
-    SYButtonLayoutHorizontalNone,
-    SYButtonLayoutHorizontalImageLeft,      // Default for image and title
-    SYButtonLayoutHorizontalImageRight,
-    SYButtonLayoutVerticalImageUp,
-    SYButtonLayoutVerticalImageDown
+typedef NS_ENUM(NSUInteger, KLButtonLayout) {
+    KLButtonLayoutHorizontalNone,
+    KLButtonLayoutHorizontalImageLeft,      // Default for image and title
+    KLButtonLayoutHorizontalImageRight,
+    KLButtonLayoutVerticalImageUp,
+    KLButtonLayoutVerticalImageDown
 };
 
 @interface UIButton (Base)
 
 + (instancetype)buttonWithTitle:(NSString *)title;
 + (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName;
-+ (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName layout:(SYButtonLayout)layout;
++ (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName layout:(KLButtonLayout)layout;
 + (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName disabledImageName:(NSString *)disabledImageName;
-+ (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName disabledImageName:(NSString *)disabledImageName layout:(SYButtonLayout)layout;
++ (instancetype)buttonWithTitle:(NSString *)title imageName:(NSString *)imageName disabledImageName:(NSString *)disabledImageName layout:(KLButtonLayout)layout;
 + (instancetype)buttonWithImageName:(NSString *)imageName;
 + (instancetype)buttonWithImageName:(NSString *)imageName selectedImageName:(NSString *)selImageName;
 + (instancetype)buttonWithImageName:(NSString *)imageName disabledImageName:(NSString *)disabledImageName;
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, SYButtonLayout) {
 + (instancetype)primaryButtonWithTitle:(NSString *)title;
 + (instancetype)destructiveButtonWithTitle:(NSString *)title;
 
-- (void)setLayout:(SYButtonLayout)layout;
+- (void)setLayout:(KLButtonLayout)layout;
 - (void)setNormalTitle:(NSString *)title;
 - (void)addTarget:(id)target action:(SEL)action;
 

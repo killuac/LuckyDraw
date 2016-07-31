@@ -7,15 +7,15 @@
 //
 
 #import "UIViewController+Base.h"
-//#import "SYInitialViewController.h"
-#import "SYMainViewController.h"
+//#import "KLInitialViewController.h"
+#import "KLMainViewController.h"
 
 @implementation UIViewController (Base)
 
 + (void)load
 {
 #if DEBUG
-    SYSwizzleMethod([self class], NSSelectorFromString(@"dealloc"), @selector(swizzle_dealloc), NO);
+    KLSwizzleMethod([self class], NSSelectorFromString(@"dealloc"), @selector(swizzle_dealloc), NO);
 #endif
 }
 
@@ -23,6 +23,12 @@
 {
     NSLog(@"FREE MEMORY: %@", NSStringFromClass([self class]));
     [self swizzle_dealloc];
+}
+
+#pragma mark - Lifecycle
++ (instancetype)viewControllerWithViewModel:(id)viewModel
+{
+    return [[self alloc] initWithViewModel:viewModel];
 }
 
 #pragma mark - Properties
@@ -164,7 +170,7 @@
 #pragma mark - Show view controller
 - (void)showInitialViewController
 {
-//    UIViewController *VC = [[SYInitialViewController alloc] init];
+//    UIViewController *VC = [[KLInitialViewController alloc] init];
 //    UIWindow *window = [[UIApplication sharedApplication].delegate window];
 //    window.rootViewController = VC;
 //    [window makeKeyAndVisible];
@@ -172,7 +178,7 @@
 
 - (void)showMainViewController
 {
-    SYMainViewController *VC = [[SYMainViewController alloc] init];
+    KLMainViewController *VC = [[KLMainViewController alloc] init];
     
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     window.rootViewController = VC;

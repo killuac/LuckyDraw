@@ -7,26 +7,31 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KLImagePickerViewModel.h"
 
 @interface LuckyDrawTests : XCTestCase
+
+@property (nonatomic, strong) KLImagePickerViewModel *imagePickerViewModel;
 
 @end
 
 @implementation LuckyDrawTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.imagePickerViewModel = [KLImagePickerViewModel new];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)tearDown
+{
+    self.imagePickerViewModel = nil;
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testExample
+{
+    
 }
 
 - (void)testPerformanceExample {

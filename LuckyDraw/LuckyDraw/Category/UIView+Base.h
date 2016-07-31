@@ -8,19 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN const CGFloat SYViewDefaultMargin;
-UIKIT_EXTERN const CGFloat SYViewDefaultHeight;
-UIKIT_EXTERN const CGFloat SYViewDefaultButtonHeight;
-UIKIT_EXTERN const CGFloat SYViewDefaultCornerRadius;
-UIKIT_EXTERN const NSTimeInterval SYViewDefaultAnimationDuration;
+UIKIT_EXTERN const CGFloat KLViewDefaultMargin;
+UIKIT_EXTERN const CGFloat KLViewDefaultHeight;
+UIKIT_EXTERN const CGFloat KLViewDefaultButtonHeight;
+UIKIT_EXTERN const CGFloat KLViewDefaultCornerRadius;
+UIKIT_EXTERN const NSTimeInterval KLViewDefaultAnimationDuration;
 
 
-@protocol SYViewProtocol <NSObject>
+@protocol KLViewProtocol <NSObject>
 
 @optional
 - (void)addSubviews;
 - (void)addSubviews:(NSArray *)subviews;
-- (void)addConstraints;
 
 - (void)addTapGesture;
 - (void)removeTapGesture;
@@ -31,7 +30,7 @@ UIKIT_EXTERN const NSTimeInterval SYViewDefaultAnimationDuration;
 @end
 
 
-@interface UIView (Base) <SYViewProtocol>
+@interface UIView (Base) <KLViewProtocol>
 
 + (instancetype)newAutoLayoutView;
 - (void)constraintsEqualWithSuperView;
@@ -53,6 +52,8 @@ UIKIT_EXTERN const NSTimeInterval SYViewDefaultAnimationDuration;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign, readonly) CGFloat intrinsicContentWidth;
+@property (nonatomic, assign, readonly) CGFloat intrinsicContentHeight;
 
 @property (nonatomic, assign, readonly) CGFloat statusBarHeight;
 @property (nonatomic, strong, readonly) UIViewController *viewController;
@@ -77,10 +78,10 @@ UIKIT_EXTERN const NSTimeInterval SYViewDefaultAnimationDuration;
 - (void)addBlurBackground;
 - (void)removeBlurBackground;
 
-+ (void)animateWithDefaultDuration:(SYVoidBlockType)animations;
-+ (void)animateWithDefaultDuration:(SYVoidBlockType)animations completion:(void (^)(BOOL finished))completion;
-+ (void)animateSpringWithDefaultDuration:(SYVoidBlockType)animations;
-+ (void)animateSpringWithDefaultDuration:(SYVoidBlockType)animations completion:(void (^)(BOOL finished))completion;
++ (void)animateWithDefaultDuration:(KLVoidBlockType)animations;
++ (void)animateWithDefaultDuration:(KLVoidBlockType)animations completion:(void (^)(BOOL finished))completion;
++ (void)animateSpringWithDefaultDuration:(KLVoidBlockType)animations;
++ (void)animateSpringWithDefaultDuration:(KLVoidBlockType)animations completion:(void (^)(BOOL finished))completion;
 - (void)animateSpringScale;
 
 @end

@@ -32,16 +32,33 @@
     return self.fetchResult.count;
 }
 
-- (NSArray<PHAsset *> *)assets
+- (void)fetchAssets
 {
-    NSMutableArray *assetArray = [NSMutableArray array];
-    [self.fetchResult enumerateObjectsUsingBlock:^(PHAsset * _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (asset) [assetArray addObject:asset];
-    }];
-    return assetArray;
+    KLDispatchGlobalAsync(^{
+        NSMutableArray *assetArray = [NSMutableArray array];
+        [self.fetchResult enumerateObjectsUsingBlock:^(PHAsset * _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (asset) [assetArray addObject:asset];
+        }];
+        
+        KLDispatchMainAsync(^{
+            [self setAssets:assetArray];
+        });
+    });
 }
 
-- (void)posterImage:(SYAssetBlockType)resultHandler
+- (void)setAssets:(NSArray<PHAsset *> *)assets
+{
+    [self willChangeValueForKey:@"assets"];
+    objc_setAssociatedObject(self, @selector(assets), assets, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self didChangeValueForKey:@"assets"];
+}
+
+- (NSArray<PHAsset *> *)assets
+{
+    return objc_getAssociatedObject(self, @selector(assets));
+}
+
+- (void)posterImage:(KLAssetBlockType)resultHandler
 {
     [self.assets.lastObject thumbnailImageProgressHandler:nil resultHandler:resultHandler];
 }

@@ -10,7 +10,10 @@
 
 @interface PHPhotoLibrary (Model)
 
-+ (void)checkAuthorization:(SYVoidBlockType)completion;
++ (void)checkAuthorization:(KLVoidBlockType)completion;
+
+@property (nonatomic, assign) NSUInteger currentPageIndex;
+@property (nonatomic, assign, readonly) BOOL isPageScrollEnabled;
 
 - (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *assetCollections))completion;
 

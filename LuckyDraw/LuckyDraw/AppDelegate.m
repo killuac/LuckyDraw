@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Analytics.h"
-#import "SYMainViewController.h"
+#import "KLMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
 {
     [self setupApplication];
     
-    self.window.rootViewController = [[SYMainViewController alloc] init];
+    self.window.rootViewController = [KLMainViewController viewControllerWithViewModel:[KLMainViewModel new]];
     
     return YES;
 }
@@ -37,7 +37,6 @@
     [UITableView appearance].backgroundColor = [UIColor backgroundColor];
     [UICollectionView appearance].backgroundColor = [UIColor backgroundColor];
     
-    [UITabBar appearance].tintColor = [UIColor tintColor];
     [UIToolbar appearance].tintColor = [UIColor tintColor];
     [UINavigationBar appearance].tintColor = [UIColor tintColor];
 }

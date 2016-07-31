@@ -27,10 +27,17 @@
 		E350B1F11D37C6E2007F663C /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E350B1DE1D37C6E2007F663C /* UITableViewCell+Base.m */; };
 		E350B1F21D37C6E2007F663C /* UIToolbar+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E350B1E01D37C6E2007F663C /* UIToolbar+Base.m */; };
 		E350B1F31D37C6E2007F663C /* UIViewController+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E350B1E21D37C6E2007F663C /* UIViewController+Base.m */; };
-		E390FA3A1C9AFBE4000AB558 /* SYGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */; };
-		E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */; };
+		E36665831D4C939B00322E71 /* KLDrawPoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665821D4C939B00322E71 /* KLDrawPoolViewController.m */; };
+		E36665891D4DD5BA00322E71 /* KLMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665881D4DD5BA00322E71 /* KLMainViewModel.m */; };
+		E366658C1D4DED9500322E71 /* KLDrawPoolViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E366658B1D4DED9500322E71 /* KLDrawPoolViewModel.m */; };
+		E366658F1D4E09D500322E71 /* KLDrawPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E366658E1D4E09D500322E71 /* KLDrawPoolCell.m */; };
+		E36665921D4E0AB800322E71 /* KLCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665911D4E0AB800322E71 /* KLCircleLayout.m */; };
+		E36665951D4E13A000322E71 /* UIImageView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665941D4E13A000322E71 /* UIImageView+Base.m */; };
+		E36665A61D4E457E00322E71 /* KLImagePickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */; };
+		E390FA3A1C9AFBE4000AB558 /* KLMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA391C9AFBE4000AB558 /* KLMoreViewController.m */; };
+		E390FA3D1C9AFCB8000AB558 /* KLDrawPoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3C1C9AFCB8000AB558 /* KLDrawPoolModel.m */; };
 		E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */; };
-		E390FA461C9B034B000AB558 /* SYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA451C9B034B000AB558 /* SYCameraViewController.m */; };
+		E390FA461C9B034B000AB558 /* KLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA451C9B034B000AB558 /* KLCameraViewController.m */; };
 		E3A218A61D1E479D000E0217 /* UIView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A218A51D1E479D000E0217 /* UIView+Base.m */; };
 		E3B0CB041C9A5895009950B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB031C9A5895009950B2 /* main.m */; };
 		E3B0CB071C9A5895009950B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB061C9A5895009950B2 /* AppDelegate.m */; };
@@ -41,20 +48,19 @@
 		E3B0CB281C9A5895009950B2 /* LuckyDrawUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB271C9A5895009950B2 /* LuckyDrawUITests.m */; };
 		E3B0CB471C9A5BAB009950B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B0CB491C9A5BAB009950B2 /* InfoPlist.strings */; };
 		E3B0CB4F1C9A5D35009950B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B0CB511C9A5D35009950B2 /* Localizable.strings */; };
-		E3B0CB7E1C9A6309009950B2 /* SYSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB761C9A6309009950B2 /* SYSoundPlayer.m */; };
-		E3B0CB7F1C9A6309009950B2 /* SYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB781C9A6309009950B2 /* SYUtilities.m */; };
-		E3B0CB801C9A6309009950B2 /* SYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB7B1C9A6309009950B2 /* SYMainViewController.m */; };
+		E3B0CB7E1C9A6309009950B2 /* KLSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB761C9A6309009950B2 /* KLSoundPlayer.m */; };
+		E3B0CB7F1C9A6309009950B2 /* KLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB781C9A6309009950B2 /* KLUtilities.m */; };
+		E3B0CB801C9A6309009950B2 /* KLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB7B1C9A6309009950B2 /* KLMainViewController.m */; };
 		E3B0CB851C9A6349009950B2 /* JSONModel+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB821C9A6349009950B2 /* JSONModel+Base.m */; };
 		E3B0CB861C9A6349009950B2 /* NSArray+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB841C9A6349009950B2 /* NSArray+Model.m */; };
 		E3B0CB911C9A7536009950B2 /* AppDelegate+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB901C9A7536009950B2 /* AppDelegate+Analytics.m */; };
-		E3B0CB941C9A7690009950B2 /* SYImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB931C9A7690009950B2 /* SYImagePickerController.m */; };
-		E3B0CB9A1C9A86F3009950B2 /* SYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB991C9A86F3009950B2 /* SYTableViewCell.m */; };
+		E3B0CB941C9A7690009950B2 /* KLImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB931C9A7690009950B2 /* KLImagePickerController.m */; };
+		E3B0CB9A1C9A86F3009950B2 /* KLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB991C9A86F3009950B2 /* KLTableViewCell.m */; };
 		E3B0CBA61C9AC7B8009950B2 /* PHAsset+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */; };
 		E3B0CBA91C9AC970009950B2 /* PHAssetCollection+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */; };
-		E3B1CF621C9BB972008F738C /* SYStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF611C9BB972008F738C /* SYStackView.m */; };
-		E3B1CF6A1C9C0062008F738C /* SYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */; };
-		E3B1CF6D1C9C19E6008F738C /* SYAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */; };
-		E3E1A8121D3BCA1F00E5D649 /* SYSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */; };
+		E3B1CF6A1C9C0062008F738C /* KLAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF691C9C0062008F738C /* KLAlbumCell.m */; };
+		E3B1CF6D1C9C19E6008F738C /* KLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1CF6C1C9C19E5008F738C /* KLAlbumViewController.m */; };
+		E3E1A8121D3BCA1F00E5D649 /* KLSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E1A8111D3BCA1F00E5D649 /* KLSegmentControl.m */; };
 		E3F9501B1D1E33D300AF5A5B /* Analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F9501A1D1E33D300AF5A5B /* Analytics.plist */; };
 /* End PBXBuildFile section */
 
@@ -115,14 +121,28 @@
 		E350B1E01D37C6E2007F663C /* UIToolbar+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+Base.m"; sourceTree = "<group>"; };
 		E350B1E11D37C6E2007F663C /* UIViewController+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Base.h"; sourceTree = "<group>"; };
 		E350B1E21D37C6E2007F663C /* UIViewController+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Base.m"; sourceTree = "<group>"; };
-		E390FA381C9AFBE4000AB558 /* SYGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGroupViewController.h; sourceTree = "<group>"; };
-		E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupViewController.m; sourceTree = "<group>"; };
-		E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGroupModel.h; sourceTree = "<group>"; };
-		E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGroupModel.m; sourceTree = "<group>"; };
+		E36665811D4C939B00322E71 /* KLDrawPoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawPoolViewController.h; sourceTree = "<group>"; };
+		E36665821D4C939B00322E71 /* KLDrawPoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawPoolViewController.m; sourceTree = "<group>"; };
+		E36665871D4DD5BA00322E71 /* KLMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMainViewModel.h; sourceTree = "<group>"; };
+		E36665881D4DD5BA00322E71 /* KLMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMainViewModel.m; sourceTree = "<group>"; };
+		E366658A1D4DED9500322E71 /* KLDrawPoolViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawPoolViewModel.h; sourceTree = "<group>"; };
+		E366658B1D4DED9500322E71 /* KLDrawPoolViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawPoolViewModel.m; sourceTree = "<group>"; };
+		E366658D1D4E09D500322E71 /* KLDrawPoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawPoolCell.h; sourceTree = "<group>"; };
+		E366658E1D4E09D500322E71 /* KLDrawPoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawPoolCell.m; sourceTree = "<group>"; };
+		E36665901D4E0AB800322E71 /* KLCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCircleLayout.h; sourceTree = "<group>"; };
+		E36665911D4E0AB800322E71 /* KLCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCircleLayout.m; sourceTree = "<group>"; };
+		E36665931D4E13A000322E71 /* UIImageView+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Base.h"; sourceTree = "<group>"; };
+		E36665941D4E13A000322E71 /* UIImageView+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Base.m"; sourceTree = "<group>"; };
+		E36665A41D4E457E00322E71 /* KLImagePickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLImagePickerViewModel.h; sourceTree = "<group>"; };
+		E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLImagePickerViewModel.m; sourceTree = "<group>"; };
+		E390FA381C9AFBE4000AB558 /* KLMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMoreViewController.h; sourceTree = "<group>"; };
+		E390FA391C9AFBE4000AB558 /* KLMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMoreViewController.m; sourceTree = "<group>"; };
+		E390FA3B1C9AFCB8000AB558 /* KLDrawPoolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawPoolModel.h; sourceTree = "<group>"; };
+		E390FA3C1C9AFCB8000AB558 /* KLDrawPoolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawPoolModel.m; sourceTree = "<group>"; };
 		E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+Model.h"; sourceTree = "<group>"; };
 		E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+Model.m"; sourceTree = "<group>"; };
-		E390FA441C9B034B000AB558 /* SYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCameraViewController.h; sourceTree = "<group>"; };
-		E390FA451C9B034B000AB558 /* SYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCameraViewController.m; sourceTree = "<group>"; };
+		E390FA441C9B034B000AB558 /* KLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCameraViewController.h; sourceTree = "<group>"; };
+		E390FA451C9B034B000AB558 /* KLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCameraViewController.m; sourceTree = "<group>"; };
 		E3A218A41D1E479D000E0217 /* UIView+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Base.h"; sourceTree = "<group>"; };
 		E3A218A51D1E479D000E0217 /* UIView+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Base.m"; sourceTree = "<group>"; };
 		E3B0CAFF1C9A5895009950B2 /* LuckyDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,35 +168,33 @@
 		E3B0CB531C9A5D36009950B2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E3B0CB541C9A5D37009950B2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E3B0CB551C9A5D56009950B2 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		E3B0CB751C9A6309009950B2 /* SYSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSoundPlayer.h; sourceTree = "<group>"; };
-		E3B0CB761C9A6309009950B2 /* SYSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSoundPlayer.m; sourceTree = "<group>"; };
-		E3B0CB771C9A6309009950B2 /* SYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUtilities.h; sourceTree = "<group>"; };
-		E3B0CB781C9A6309009950B2 /* SYUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUtilities.m; sourceTree = "<group>"; };
-		E3B0CB7A1C9A6309009950B2 /* SYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYMainViewController.h; sourceTree = "<group>"; };
-		E3B0CB7B1C9A6309009950B2 /* SYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYMainViewController.m; sourceTree = "<group>"; };
+		E3B0CB751C9A6309009950B2 /* KLSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSoundPlayer.h; sourceTree = "<group>"; };
+		E3B0CB761C9A6309009950B2 /* KLSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSoundPlayer.m; sourceTree = "<group>"; };
+		E3B0CB771C9A6309009950B2 /* KLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLUtilities.h; sourceTree = "<group>"; };
+		E3B0CB781C9A6309009950B2 /* KLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLUtilities.m; sourceTree = "<group>"; };
+		E3B0CB7A1C9A6309009950B2 /* KLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMainViewController.h; sourceTree = "<group>"; };
+		E3B0CB7B1C9A6309009950B2 /* KLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMainViewController.m; sourceTree = "<group>"; };
 		E3B0CB811C9A6349009950B2 /* JSONModel+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+Base.h"; sourceTree = "<group>"; };
 		E3B0CB821C9A6349009950B2 /* JSONModel+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+Base.m"; sourceTree = "<group>"; };
 		E3B0CB831C9A6349009950B2 /* NSArray+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Model.h"; sourceTree = "<group>"; };
 		E3B0CB841C9A6349009950B2 /* NSArray+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Model.m"; sourceTree = "<group>"; };
-		E3B0CB871C9A63A3009950B2 /* SYLocalizableConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLocalizableConstant.h; sourceTree = "<group>"; };
+		E3B0CB871C9A63A3009950B2 /* KLLocalizableConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLLocalizableConstant.h; sourceTree = "<group>"; };
 		E3B0CB8F1C9A7536009950B2 /* AppDelegate+Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Analytics.h"; sourceTree = "<group>"; };
 		E3B0CB901C9A7536009950B2 /* AppDelegate+Analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Analytics.m"; sourceTree = "<group>"; };
-		E3B0CB921C9A7690009950B2 /* SYImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImagePickerController.h; sourceTree = "<group>"; };
-		E3B0CB931C9A7690009950B2 /* SYImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImagePickerController.m; sourceTree = "<group>"; };
-		E3B0CB981C9A86F3009950B2 /* SYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableViewCell.h; sourceTree = "<group>"; };
-		E3B0CB991C9A86F3009950B2 /* SYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableViewCell.m; sourceTree = "<group>"; };
+		E3B0CB921C9A7690009950B2 /* KLImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLImagePickerController.h; sourceTree = "<group>"; };
+		E3B0CB931C9A7690009950B2 /* KLImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLImagePickerController.m; sourceTree = "<group>"; };
+		E3B0CB981C9A86F3009950B2 /* KLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTableViewCell.h; sourceTree = "<group>"; };
+		E3B0CB991C9A86F3009950B2 /* KLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTableViewCell.m; sourceTree = "<group>"; };
 		E3B0CBA41C9AC7B8009950B2 /* PHAsset+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+Model.h"; sourceTree = "<group>"; };
 		E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Model.m"; sourceTree = "<group>"; };
 		E3B0CBA71C9AC970009950B2 /* PHAssetCollection+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+Model.h"; sourceTree = "<group>"; };
 		E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+Model.m"; sourceTree = "<group>"; };
-		E3B1CF601C9BB972008F738C /* SYStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYStackView.h; sourceTree = "<group>"; };
-		E3B1CF611C9BB972008F738C /* SYStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYStackView.m; sourceTree = "<group>"; };
-		E3B1CF681C9C0062008F738C /* SYAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlbumCollectionViewCell.h; sourceTree = "<group>"; };
-		E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlbumCollectionViewCell.m; sourceTree = "<group>"; };
-		E3B1CF6B1C9C19E5008F738C /* SYAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlbumViewController.h; sourceTree = "<group>"; };
-		E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlbumViewController.m; sourceTree = "<group>"; };
-		E3E1A8101D3BCA1F00E5D649 /* SYSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSegmentControl.h; sourceTree = "<group>"; };
-		E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSegmentControl.m; sourceTree = "<group>"; };
+		E3B1CF681C9C0062008F738C /* KLAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAlbumCell.h; sourceTree = "<group>"; };
+		E3B1CF691C9C0062008F738C /* KLAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAlbumCell.m; sourceTree = "<group>"; };
+		E3B1CF6B1C9C19E5008F738C /* KLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAlbumViewController.h; sourceTree = "<group>"; };
+		E3B1CF6C1C9C19E5008F738C /* KLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAlbumViewController.m; sourceTree = "<group>"; };
+		E3E1A8101D3BCA1F00E5D649 /* KLSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSegmentControl.h; sourceTree = "<group>"; };
+		E3E1A8111D3BCA1F00E5D649 /* KLSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSegmentControl.m; sourceTree = "<group>"; };
 		E3F9501A1D1E33D300AF5A5B /* Analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Analytics.plist; sourceTree = "<group>"; };
 		F3E0C09564597F6F0F0DC9A8 /* Pods_LuckyDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69FE1952DBEB572FCEC2BC0 /* Pods-LuckyDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyDraw/Pods-LuckyDraw.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +246,12 @@
 		E350B1F41D37C9EB007F663C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E366658A1D4DED9500322E71 /* KLDrawPoolViewModel.h */,
+				E366658B1D4DED9500322E71 /* KLDrawPoolViewModel.m */,
+				E36665A41D4E457E00322E71 /* KLImagePickerViewModel.h */,
+				E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */,
+				E36665871D4DD5BA00322E71 /* KLMainViewModel.h */,
+				E36665881D4DD5BA00322E71 /* KLMainViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -335,6 +359,8 @@
 				E350B1D41D37C6E2007F663C /* UIFont+Base.m */,
 				E350B1D51D37C6E2007F663C /* UIImage+Base.h */,
 				E350B1D61D37C6E2007F663C /* UIImage+Base.m */,
+				E36665931D4E13A000322E71 /* UIImageView+Base.h */,
+				E36665941D4E13A000322E71 /* UIImageView+Base.m */,
 				E350B1D91D37C6E2007F663C /* UILabel+Base.h */,
 				E350B1DA1D37C6E2007F663C /* UILabel+Base.m */,
 				E350B1DB1D37C6E2007F663C /* UISwitch+Base.h */,
@@ -354,11 +380,11 @@
 		E3B0CB731C9A6309009950B2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E3B0CB871C9A63A3009950B2 /* SYLocalizableConstant.h */,
-				E3B0CB751C9A6309009950B2 /* SYSoundPlayer.h */,
-				E3B0CB761C9A6309009950B2 /* SYSoundPlayer.m */,
-				E3B0CB771C9A6309009950B2 /* SYUtilities.h */,
-				E3B0CB781C9A6309009950B2 /* SYUtilities.m */,
+				E3B0CB871C9A63A3009950B2 /* KLLocalizableConstant.h */,
+				E3B0CB751C9A6309009950B2 /* KLSoundPlayer.h */,
+				E3B0CB761C9A6309009950B2 /* KLSoundPlayer.m */,
+				E3B0CB771C9A6309009950B2 /* KLUtilities.h */,
+				E3B0CB781C9A6309009950B2 /* KLUtilities.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -366,16 +392,18 @@
 		E3B0CB791C9A6309009950B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E3B1CF6B1C9C19E5008F738C /* SYAlbumViewController.h */,
-				E3B1CF6C1C9C19E5008F738C /* SYAlbumViewController.m */,
-				E390FA441C9B034B000AB558 /* SYCameraViewController.h */,
-				E390FA451C9B034B000AB558 /* SYCameraViewController.m */,
-				E390FA381C9AFBE4000AB558 /* SYGroupViewController.h */,
-				E390FA391C9AFBE4000AB558 /* SYGroupViewController.m */,
-				E3B0CB921C9A7690009950B2 /* SYImagePickerController.h */,
-				E3B0CB931C9A7690009950B2 /* SYImagePickerController.m */,
-				E3B0CB7A1C9A6309009950B2 /* SYMainViewController.h */,
-				E3B0CB7B1C9A6309009950B2 /* SYMainViewController.m */,
+				E3B1CF6B1C9C19E5008F738C /* KLAlbumViewController.h */,
+				E3B1CF6C1C9C19E5008F738C /* KLAlbumViewController.m */,
+				E390FA441C9B034B000AB558 /* KLCameraViewController.h */,
+				E390FA451C9B034B000AB558 /* KLCameraViewController.m */,
+				E36665811D4C939B00322E71 /* KLDrawPoolViewController.h */,
+				E36665821D4C939B00322E71 /* KLDrawPoolViewController.m */,
+				E3B0CB921C9A7690009950B2 /* KLImagePickerController.h */,
+				E3B0CB931C9A7690009950B2 /* KLImagePickerController.m */,
+				E3B0CB7A1C9A6309009950B2 /* KLMainViewController.h */,
+				E3B0CB7B1C9A6309009950B2 /* KLMainViewController.m */,
+				E390FA381C9AFBE4000AB558 /* KLMoreViewController.h */,
+				E390FA391C9AFBE4000AB558 /* KLMoreViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -385,6 +413,8 @@
 			children = (
 				E3B0CB811C9A6349009950B2 /* JSONModel+Base.h */,
 				E3B0CB821C9A6349009950B2 /* JSONModel+Base.m */,
+				E390FA3B1C9AFCB8000AB558 /* KLDrawPoolModel.h */,
+				E390FA3C1C9AFCB8000AB558 /* KLDrawPoolModel.m */,
 				E3B0CB831C9A6349009950B2 /* NSArray+Model.h */,
 				E3B0CB841C9A6349009950B2 /* NSArray+Model.m */,
 				E3B0CBA41C9AC7B8009950B2 /* PHAsset+Model.h */,
@@ -393,8 +423,6 @@
 				E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */,
 				E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */,
 				E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */,
-				E390FA3B1C9AFCB8000AB558 /* SYGroupModel.h */,
-				E390FA3C1C9AFCB8000AB558 /* SYGroupModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,14 +430,16 @@
 		E3B0CB7D1C9A6309009950B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E3B1CF681C9C0062008F738C /* SYAlbumCollectionViewCell.h */,
-				E3B1CF691C9C0062008F738C /* SYAlbumCollectionViewCell.m */,
-				E3E1A8101D3BCA1F00E5D649 /* SYSegmentControl.h */,
-				E3E1A8111D3BCA1F00E5D649 /* SYSegmentControl.m */,
-				E3B1CF601C9BB972008F738C /* SYStackView.h */,
-				E3B1CF611C9BB972008F738C /* SYStackView.m */,
-				E3B0CB981C9A86F3009950B2 /* SYTableViewCell.h */,
-				E3B0CB991C9A86F3009950B2 /* SYTableViewCell.m */,
+				E3B1CF681C9C0062008F738C /* KLAlbumCell.h */,
+				E3B1CF691C9C0062008F738C /* KLAlbumCell.m */,
+				E36665901D4E0AB800322E71 /* KLCircleLayout.h */,
+				E36665911D4E0AB800322E71 /* KLCircleLayout.m */,
+				E366658D1D4E09D500322E71 /* KLDrawPoolCell.h */,
+				E366658E1D4E09D500322E71 /* KLDrawPoolCell.m */,
+				E3E1A8101D3BCA1F00E5D649 /* KLSegmentControl.h */,
+				E3E1A8111D3BCA1F00E5D649 /* KLSegmentControl.m */,
+				E3B0CB981C9A86F3009950B2 /* KLTableViewCell.h */,
+				E3B0CB991C9A86F3009950B2 /* KLTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,7 +517,7 @@
 		E3B0CAF71C9A5895009950B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SY;
+				CLASSPREFIX = KL;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Syzygy;
 				TargetAttributes = {
@@ -634,43 +664,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3B0CB801C9A6309009950B2 /* SYMainViewController.m in Sources */,
-				E3B1CF6D1C9C19E6008F738C /* SYAlbumViewController.m in Sources */,
+				E3B0CB801C9A6309009950B2 /* KLMainViewController.m in Sources */,
+				E36665951D4E13A000322E71 /* UIImageView+Base.m in Sources */,
+				E3B1CF6D1C9C19E6008F738C /* KLAlbumViewController.m in Sources */,
 				E350B1F01D37C6E2007F663C /* UISwitch+Base.m in Sources */,
 				E3A218A61D1E479D000E0217 /* UIView+Base.m in Sources */,
 				E350B1E71D37C6E2007F663C /* NSTimer+Base.m in Sources */,
 				E350B1E91D37C6E2007F663C /* UIBarButtonItem+Base.m in Sources */,
-				E3B0CB9A1C9A86F3009950B2 /* SYTableViewCell.m in Sources */,
-				E390FA461C9B034B000AB558 /* SYCameraViewController.m in Sources */,
+				E36665A61D4E457E00322E71 /* KLImagePickerViewModel.m in Sources */,
+				E3B0CB9A1C9A86F3009950B2 /* KLTableViewCell.m in Sources */,
+				E390FA461C9B034B000AB558 /* KLCameraViewController.m in Sources */,
+				E366658C1D4DED9500322E71 /* KLDrawPoolViewModel.m in Sources */,
 				E350B1EF1D37C6E2007F663C /* UILabel+Base.m in Sources */,
 				E350B1EC1D37C6E2007F663C /* UIFont+Base.m in Sources */,
-				E3B0CB941C9A7690009950B2 /* SYImagePickerController.m in Sources */,
-				E3B0CB7E1C9A6309009950B2 /* SYSoundPlayer.m in Sources */,
+				E3B0CB941C9A7690009950B2 /* KLImagePickerController.m in Sources */,
+				E3B0CB7E1C9A6309009950B2 /* KLSoundPlayer.m in Sources */,
 				E3B0CB861C9A6349009950B2 /* NSArray+Model.m in Sources */,
 				E3B0CBA91C9AC970009950B2 /* PHAssetCollection+Model.m in Sources */,
 				E3B0CB071C9A5895009950B2 /* AppDelegate.m in Sources */,
-				E3B1CF621C9BB972008F738C /* SYStackView.m in Sources */,
+				E36665921D4E0AB800322E71 /* KLCircleLayout.m in Sources */,
 				E3B0CB851C9A6349009950B2 /* JSONModel+Base.m in Sources */,
 				E350B1E81D37C6E2007F663C /* UIAlertController+Base.m in Sources */,
+				E36665831D4C939B00322E71 /* KLDrawPoolViewController.m in Sources */,
+				E36665891D4DD5BA00322E71 /* KLMainViewModel.m in Sources */,
 				E350B1F31D37C6E2007F663C /* UIViewController+Base.m in Sources */,
-				E390FA3A1C9AFBE4000AB558 /* SYGroupViewController.m in Sources */,
+				E390FA3A1C9AFBE4000AB558 /* KLMoreViewController.m in Sources */,
 				E350B1E31D37C6E2007F663C /* NSData+Base.m in Sources */,
 				E3B0CB911C9A7536009950B2 /* AppDelegate+Analytics.m in Sources */,
 				E350B1EA1D37C6E2007F663C /* UIButton+Base.m in Sources */,
 				E350B1ED1D37C6E2007F663C /* UIImage+Base.m in Sources */,
+				E366658F1D4E09D500322E71 /* KLDrawPoolCell.m in Sources */,
 				E350B1E41D37C6E2007F663C /* NSDate+Base.m in Sources */,
 				E350B1E61D37C6E2007F663C /* NSString+Base.m in Sources */,
-				E3B0CB7F1C9A6309009950B2 /* SYUtilities.m in Sources */,
+				E3B0CB7F1C9A6309009950B2 /* KLUtilities.m in Sources */,
 				E350B1E51D37C6E2007F663C /* NSLayoutConstraint+Base.m in Sources */,
 				E350B1F11D37C6E2007F663C /* UITableViewCell+Base.m in Sources */,
 				E3B0CBA61C9AC7B8009950B2 /* PHAsset+Model.m in Sources */,
 				E3B0CB041C9A5895009950B2 /* main.m in Sources */,
-				E3B1CF6A1C9C0062008F738C /* SYAlbumCollectionViewCell.m in Sources */,
+				E3B1CF6A1C9C0062008F738C /* KLAlbumCell.m in Sources */,
 				E350B1EB1D37C6E2007F663C /* UIColor+Base.m in Sources */,
-				E390FA3D1C9AFCB8000AB558 /* SYGroupModel.m in Sources */,
+				E390FA3D1C9AFCB8000AB558 /* KLDrawPoolModel.m in Sources */,
 				E350B1F21D37C6E2007F663C /* UIToolbar+Base.m in Sources */,
 				E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */,
-				E3E1A8121D3BCA1F00E5D649 /* SYSegmentControl.m in Sources */,
+				E3E1A8121D3BCA1F00E5D649 /* KLSegmentControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +905,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Xwalker.Lucky-Draw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -886,6 +923,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Xwalker.Lucky-Draw";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

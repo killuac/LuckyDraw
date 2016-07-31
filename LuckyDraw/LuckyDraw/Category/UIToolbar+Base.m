@@ -20,7 +20,7 @@
 
 + (void)load
 {
-    SYSwizzleMethod([self class], @selector(layoutSubviews), @selector(swizzle_layoutSubviews), NO);
+    KLSwizzleMethod([self class], @selector(layoutSubviews), @selector(swizzle_layoutSubviews), NO);
 }
 
 + (instancetype)toolbarWithItems:(NSArray<UIBarButtonItem *> *)items
@@ -116,6 +116,24 @@
             [self.separators[idx-1] setFrame:CGRectMake(width * idx, margin, 0.5, self.height-margin*2)];
         }
     }];
+}
+
+- (void)setSeparatorColor:(UIColor *)color
+{
+    self.translucent = YES;
+    
+    UIView *separator = [[UIView alloc] init];
+    separator.width = 1;
+    separator.height = 0.5;
+    separator.backgroundColor = color;
+    
+    UIGraphicsBeginImageContextWithOptions(separator.size, NO,  0.0f);
+    [separator.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self setShadowImage:image forToolbarPosition:UIBarPositionAny];
+    [self setBackgroundImage:[UIImage new] forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
 }
 
 @end

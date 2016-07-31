@@ -8,11 +8,11 @@
 
 #import "UIView+Base.h"
 
-const CGFloat SYViewDefaultMargin = 16.0f;
-const CGFloat SYViewDefaultHeight = 44.0f;
-const CGFloat SYViewDefaultButtonHeight = 40.0f;
-const CGFloat SYViewDefaultCornerRadius = 6.0f;
-const NSTimeInterval SYViewDefaultAnimationDuration = 0.25;
+const CGFloat KLViewDefaultMargin = 16.0f;
+const CGFloat KLViewDefaultHeight = 44.0f;
+const CGFloat KLViewDefaultButtonHeight = 40.0f;
+const CGFloat KLViewDefaultCornerRadius = 6.0f;
+const NSTimeInterval KLViewDefaultAnimationDuration = 0.25;
 
 @implementation UIView (Base)
 
@@ -218,6 +218,17 @@ const NSTimeInterval SYViewDefaultAnimationDuration = 0.25;
     self.frame = frame;
 }
 
+#pragma mark - Intrinsic Content Width/Height
+- (CGFloat)intrinsicContentWidth
+{
+    return self.intrinsicContentSize.width;
+}
+
+- (CGFloat)intrinsicContentHeight
+{
+    return self.intrinsicContentSize.height;
+}
+
 #pragma mark - Super and sub view
 - (id)superTableView
 {
@@ -377,24 +388,24 @@ const NSTimeInterval SYViewDefaultAnimationDuration = 0.25;
 }
 
 #pragma mark - Animation
-+ (void)animateWithDefaultDuration:(SYVoidBlockType)animations
++ (void)animateWithDefaultDuration:(KLVoidBlockType)animations
 {
     [UIView animateWithDefaultDuration:animations completion:nil];
 }
 
-+ (void)animateWithDefaultDuration:(SYVoidBlockType)animations completion:(void (^)(BOOL finished))completion
++ (void)animateWithDefaultDuration:(KLVoidBlockType)animations completion:(void (^)(BOOL finished))completion
 {
-    [UIView animateWithDuration:SYViewDefaultAnimationDuration animations:animations completion:completion];
+    [UIView animateWithDuration:KLViewDefaultAnimationDuration animations:animations completion:completion];
 }
 
-+ (void)animateSpringWithDefaultDuration:(SYVoidBlockType)animations
++ (void)animateSpringWithDefaultDuration:(KLVoidBlockType)animations
 {
     [UIView animateSpringWithDefaultDuration:animations completion:nil];
 }
 
-+ (void)animateSpringWithDefaultDuration:(SYVoidBlockType)animations completion:(void (^)(BOOL finished))completion
++ (void)animateSpringWithDefaultDuration:(KLVoidBlockType)animations completion:(void (^)(BOOL finished))completion
 {
-    [UIView animateWithDuration:SYViewDefaultAnimationDuration
+    [UIView animateWithDuration:KLViewDefaultAnimationDuration
                           delay:0
          usingSpringWithDamping:0.5
           initialSpringVelocity:10

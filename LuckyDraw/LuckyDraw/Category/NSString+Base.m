@@ -8,7 +8,7 @@
 
 #import "NSString+Base.h"
 #import <CommonCrypto/CommonDigest.h>
-#import "RegExCategories.h"
+#import <RegExCategories/RegExCategories.h>
 
 #define ALPHABET_62 @"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 

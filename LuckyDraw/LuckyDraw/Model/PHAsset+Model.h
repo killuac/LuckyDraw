@@ -9,13 +9,11 @@
 #import <Photos/Photos.h>
 @import CoreData;
 
-typedef void (^SYAssetBlockType)(UIImage *image, NSDictionary *info);
+typedef void (^KLAssetBlockType)(UIImage *image, NSDictionary *info);
 
 @interface PHAsset (Model)
 
-@property (nonatomic, assign) BOOL isSelected;
-
-- (void)thumbnailImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(SYAssetBlockType)resultHandler;
-- (void)originalImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(SYAssetBlockType)resultHandler;
+- (void)thumbnailImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(KLAssetBlockType)resultHandler;
+- (void)originalImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(KLAssetBlockType)resultHandler;
 
 @end

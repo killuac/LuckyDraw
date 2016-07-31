@@ -15,6 +15,7 @@
 @property (nonatomic, assign, readonly) NSUInteger assetCount;
 @property (nonatomic, strong, readonly) NSArray<PHAsset *> *assets;
 
-- (void)posterImage:(SYAssetBlockType)resultHandler;
+- (void)fetchAssets;
+- (void)posterImage:(KLAssetBlockType)resultHandler;
 
 @end

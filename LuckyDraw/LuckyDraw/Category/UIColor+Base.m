@@ -29,12 +29,12 @@
 #pragma mark - Tint color
 + (instancetype)tintColor
 {
-    return [UIColor colorWithRed:102/255.0 green:153/255.0 blue:161/255.0 alpha:1.0];   // 青浅葱
+    return [UIColor colorWithRed:49/255.0 green:49/255.0 blue:49/255.0 alpha:1.0];
 }
 
 + (instancetype)barTintColor
 {
-    return [UIColor colorWithRed:64/255.0 green:91/255.0 blue:85/255.0 alpha:1.0];      // 青铁御纳户
+    return [UIColor whiteColor];
 }
 
 #pragma mark - Background color
@@ -45,7 +45,7 @@
 
 + (instancetype)darkBackgroundColor
 {
-    return [UIColor colorWithRed:35/255.0 green:35/255.0 blue:35/255.0 alpha:1.0];
+    return [UIColor colorWithRed:40/255.0 green:40/255.0 blue:40/255.0 alpha:1.0];
 }
 
 #pragma mark - Text color
@@ -61,7 +61,7 @@
 
 + (instancetype)separatorColor
 {
-    return [UIColor lightGrayColor];
+    return [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
 }
 
 #pragma mark - Button color

@@ -11,7 +11,7 @@
 
 @implementation PHPhotoLibrary (Service)
 
-+ (void)checkAuthorization:(SYVoidBlockType)completion
++ (void)checkAuthorization:(KLVoidBlockType)completion
 {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (PHAuthorizationStatusNotDetermined == status) {
@@ -23,15 +23,13 @@
     }
 }
 
-+ (void)checkPhotoLibraryWithStatus:(NSInteger)status completion:(SYVoidBlockType)completion
++ (void)checkPhotoLibraryWithStatus:(NSInteger)status completion:(KLVoidBlockType)completion
 {
-    SYDispatchMainAsync(^{
-        if (PHAuthorizationStatusAuthorized == status) {
-            completion();
-        } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
-            [self showAlert];
-        }
-    });
+    if (PHAuthorizationStatusAuthorized == status) {
+        completion();
+    } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
+        [self showAlert];
+    }
 }
 
 + (void)showAlert
@@ -47,16 +45,14 @@
 
 - (void)loadAssetCollections:(void (^)(NSArray<PHAssetCollection *> *))completion
 {
-    NSParameterAssert(!completion);
+    NSParameterAssert(completion);
     NSMutableArray *assetCollections = [NSMutableArray array];
     
-    SYDispatchGlobalAsync(^{
+    KLDispatchGlobalAsync(^{
         PHFetchOptions *options = [[PHFetchOptions alloc] init];
         options.predicate = [NSPredicate predicateWithFormat:@"estimatedAssetCount > 0"];
         
-        PHFetchResult *results = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum
-                                                           subtype:PHAssetCollectionSubtypeAny
-                                                           options:options];
+        PHFetchResult *results = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAny options:options];
         [results enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([self isCoveredForSubtype:collection.assetCollectionSubtype]) {
                 if (collection.assetCount > 0)
@@ -64,9 +60,7 @@
             }
         }];
         
-        results = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
-                                                           subtype:PHAssetCollectionSubtypeAny
-                                                           options:options];
+        results = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:options];
         [results enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([self isCoveredForSubtype:collection.assetCollectionSubtype]) {
                 if (collection.assetCount > 0)
@@ -74,7 +68,7 @@
             }
         }];
         
-        SYDispatchMainAsync(^{
+        KLDispatchMainAsync(^{
             [assetCollections sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"assetCount" ascending:NO]]];
             completion(assetCollections);
         });

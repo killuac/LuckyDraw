@@ -8,21 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SYViewControllerProtocol <SYViewProtocol>
+@protocol KLViewControllerProtocol <KLViewProtocol>
 
 @optional
+- (instancetype)initWithViewModel:(id)viewModel;
+
 - (void)prepareForUI;
 - (void)setupNavigationBar;
 
 - (void)loadData;
-- (void)loadData:(SYVoidBlockType)completion;
+- (void)loadData:(KLVoidBlockType)completion;
 - (void)reloadData;
 - (void)refreshUI;
 
 @end
 
 
-@interface UIViewController (Base) <SYViewControllerProtocol, UITextFieldDelegate>
+@interface UIViewController (Base) <KLViewControllerProtocol, UITextFieldDelegate>
+
++ (instancetype)viewControllerWithViewModel:(id)viewModel;
 
 @property (nonatomic, assign) BOOL isLoadingData;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
