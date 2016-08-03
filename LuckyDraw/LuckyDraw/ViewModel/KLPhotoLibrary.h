@@ -1,5 +1,5 @@
 //
-//  KLImagePickerViewModel.h
+//  KLPhotoLibrary.h
 //  LuckyDraw
 //
 //  Created by Killua Liu on 7/31/16.
@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "PHAssetCollection+Model.h"
 
-@interface KLImagePickerViewModel : NSObject
+@interface KLPhotoLibrary : NSObject
 
 @property (nonatomic, strong, readonly) NSArray<PHAssetCollection *> *assetCollections;
 @property (nonatomic, strong, readonly) NSArray<NSString *> *collectionTitles;
 
+@property (nonatomic, assign) NSUInteger selectedAssetCollectionIndex;
 @property (nonatomic, strong, readonly) PHAssetCollection *selectedAssetCollection;
 @property (nonatomic, assign, readonly) NSUInteger selectedCollectionAssetCount;
 
-@property (nonatomic, assign) NSUInteger currentPageIndex;
 @property (nonatomic, assign, readonly) BOOL isPageScrollEnabled;
-@property (nonatomic, assign, readonly) NSUInteger collectionCount;
+@property (nonatomic, assign, readonly) NSUInteger assetCollectionCount;
 
 - (void)checkAuthorization:(KLVoidBlockType)handler;
 - (PHAsset *)assetAtIndex:(NSUInteger)index;

@@ -12,7 +12,7 @@
 
 @interface KLAlbumViewController ()
 
-@property (nonatomic, strong) KLImagePickerViewModel *viewModel;
+@property (nonatomic, strong) KLPhotoLibrary *photoLibrary;
 @property (nonatomic, strong) NSArray *assets;
 
 @property (nonatomic, strong) KLImagePickerController *imagePicker;
@@ -21,16 +21,16 @@
 
 @implementation KLAlbumViewController
 
-+ (instancetype)viewControllerWithPageIndex:(NSUInteger)pageIndex viewModel:(id)viewModel
++ (instancetype)viewControllerWithPageIndex:(NSUInteger)pageIndex photoLibrary:(KLPhotoLibrary *)photoLibrary
 {
-    return [[self alloc] initWithPageIndex:pageIndex viewModel:viewModel];
+    return [[self alloc] initWithPageIndex:pageIndex photoLibrary:photoLibrary];
 }
 
-- (instancetype)initWithPageIndex:(NSUInteger)pageIndex viewModel:(id)viewModel
+- (instancetype)initWithPageIndex:(NSUInteger)pageIndex photoLibrary:(id)photoLibrary
 {
     if (self = [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]]) {
         _pageIndex = pageIndex;
-        _viewModel = viewModel;
+        _photoLibrary = photoLibrary;
     }
     return self;
 }
@@ -59,7 +59,7 @@
 - (void)addObservers
 {
     self.KVOController = [FBKVOController controllerWithObserver:self];
-    [self.KVOController observe:self.viewModel keyPath:NSStringFromSelector(@selector(assets)) options:0 action:@selector(reloadData)];
+    [self.KVOController observe:self.photoLibrary keyPath:NSStringFromSelector(@selector(assets)) options:0 action:@selector(reloadData)];
 }
 
 - (void)reloadData
@@ -70,13 +70,13 @@
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.viewModel.selectedCollectionAssetCount;
+    return self.photoLibrary.selectedCollectionAssetCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     KLAlbumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CVC_REUSE_IDENTIFIER forIndexPath:indexPath];
-    [cell configWithAsset:[self.viewModel assetAtIndex:indexPath.item]];
+    [cell configWithAsset:[self.photoLibrary assetAtIndex:indexPath.item]];
     
     return cell;
 }

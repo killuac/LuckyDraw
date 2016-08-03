@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "KLImagePickerViewModel.h"
+#import "KLPhotoLibrary.h"
 
 @interface LuckyDrawTests : XCTestCase
 
-@property (nonatomic, strong) KLImagePickerViewModel *imagePickerViewModel;
+@property (nonatomic, strong) KLPhotoLibrary *photoLibrary;
 
 @end
 
@@ -20,12 +20,12 @@
 - (void)setUp
 {
     [super setUp];
-    self.imagePickerViewModel = [KLImagePickerViewModel new];
+    self.photoLibrary = [KLPhotoLibrary new];
 }
 
 - (void)tearDown
 {
-    self.imagePickerViewModel = nil;
+    self.photoLibrary = nil;
     [super tearDown];
 }
 

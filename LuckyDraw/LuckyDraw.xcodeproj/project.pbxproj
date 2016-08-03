@@ -33,10 +33,9 @@
 		E366658F1D4E09D500322E71 /* KLDrawPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E366658E1D4E09D500322E71 /* KLDrawPoolCell.m */; };
 		E36665921D4E0AB800322E71 /* KLCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665911D4E0AB800322E71 /* KLCircleLayout.m */; };
 		E36665951D4E13A000322E71 /* UIImageView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665941D4E13A000322E71 /* UIImageView+Base.m */; };
-		E36665A61D4E457E00322E71 /* KLImagePickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */; };
+		E36665A61D4E457E00322E71 /* KLPhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E36665A51D4E457E00322E71 /* KLPhotoLibrary.m */; };
 		E390FA3A1C9AFBE4000AB558 /* KLMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA391C9AFBE4000AB558 /* KLMoreViewController.m */; };
 		E390FA3D1C9AFCB8000AB558 /* KLDrawPoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3C1C9AFCB8000AB558 /* KLDrawPoolModel.m */; };
-		E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */; };
 		E390FA461C9B034B000AB558 /* KLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E390FA451C9B034B000AB558 /* KLCameraViewController.m */; };
 		E3A218A61D1E479D000E0217 /* UIView+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A218A51D1E479D000E0217 /* UIView+Base.m */; };
 		E3B0CB041C9A5895009950B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B0CB031C9A5895009950B2 /* main.m */; };
@@ -133,14 +132,12 @@
 		E36665911D4E0AB800322E71 /* KLCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCircleLayout.m; sourceTree = "<group>"; };
 		E36665931D4E13A000322E71 /* UIImageView+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Base.h"; sourceTree = "<group>"; };
 		E36665941D4E13A000322E71 /* UIImageView+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Base.m"; sourceTree = "<group>"; };
-		E36665A41D4E457E00322E71 /* KLImagePickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLImagePickerViewModel.h; sourceTree = "<group>"; };
-		E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLImagePickerViewModel.m; sourceTree = "<group>"; };
+		E36665A41D4E457E00322E71 /* KLPhotoLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLPhotoLibrary.h; sourceTree = "<group>"; };
+		E36665A51D4E457E00322E71 /* KLPhotoLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPhotoLibrary.m; sourceTree = "<group>"; };
 		E390FA381C9AFBE4000AB558 /* KLMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMoreViewController.h; sourceTree = "<group>"; };
 		E390FA391C9AFBE4000AB558 /* KLMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMoreViewController.m; sourceTree = "<group>"; };
 		E390FA3B1C9AFCB8000AB558 /* KLDrawPoolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawPoolModel.h; sourceTree = "<group>"; };
 		E390FA3C1C9AFCB8000AB558 /* KLDrawPoolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawPoolModel.m; sourceTree = "<group>"; };
-		E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+Model.h"; sourceTree = "<group>"; };
-		E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+Model.m"; sourceTree = "<group>"; };
 		E390FA441C9B034B000AB558 /* KLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCameraViewController.h; sourceTree = "<group>"; };
 		E390FA451C9B034B000AB558 /* KLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCameraViewController.m; sourceTree = "<group>"; };
 		E3A218A41D1E479D000E0217 /* UIView+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Base.h"; sourceTree = "<group>"; };
@@ -248,10 +245,10 @@
 			children = (
 				E366658A1D4DED9500322E71 /* KLDrawPoolViewModel.h */,
 				E366658B1D4DED9500322E71 /* KLDrawPoolViewModel.m */,
-				E36665A41D4E457E00322E71 /* KLImagePickerViewModel.h */,
-				E36665A51D4E457E00322E71 /* KLImagePickerViewModel.m */,
 				E36665871D4DD5BA00322E71 /* KLMainViewModel.h */,
 				E36665881D4DD5BA00322E71 /* KLMainViewModel.m */,
+				E36665A41D4E457E00322E71 /* KLPhotoLibrary.h */,
+				E36665A51D4E457E00322E71 /* KLPhotoLibrary.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -421,8 +418,6 @@
 				E3B0CBA51C9AC7B8009950B2 /* PHAsset+Model.m */,
 				E3B0CBA71C9AC970009950B2 /* PHAssetCollection+Model.h */,
 				E3B0CBA81C9AC970009950B2 /* PHAssetCollection+Model.m */,
-				E390FA3E1C9AFCEA000AB558 /* PHPhotoLibrary+Model.h */,
-				E390FA3F1C9AFCEA000AB558 /* PHPhotoLibrary+Model.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -671,7 +666,7 @@
 				E3A218A61D1E479D000E0217 /* UIView+Base.m in Sources */,
 				E350B1E71D37C6E2007F663C /* NSTimer+Base.m in Sources */,
 				E350B1E91D37C6E2007F663C /* UIBarButtonItem+Base.m in Sources */,
-				E36665A61D4E457E00322E71 /* KLImagePickerViewModel.m in Sources */,
+				E36665A61D4E457E00322E71 /* KLPhotoLibrary.m in Sources */,
 				E3B0CB9A1C9A86F3009950B2 /* KLTableViewCell.m in Sources */,
 				E390FA461C9B034B000AB558 /* KLCameraViewController.m in Sources */,
 				E366658C1D4DED9500322E71 /* KLDrawPoolViewModel.m in Sources */,
@@ -705,7 +700,6 @@
 				E350B1EB1D37C6E2007F663C /* UIColor+Base.m in Sources */,
 				E390FA3D1C9AFCB8000AB558 /* KLDrawPoolModel.m in Sources */,
 				E350B1F21D37C6E2007F663C /* UIToolbar+Base.m in Sources */,
-				E390FA401C9AFCEA000AB558 /* PHPhotoLibrary+Model.m in Sources */,
 				E3E1A8121D3BCA1F00E5D649 /* KLSegmentControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,27 +1,28 @@
 //
-//  KLImagePickerViewModel.m
+//  KLPhotoLibrary.m
 //  LuckyDraw
 //
 //  Created by Killua Liu on 7/31/16.
 //  Copyright © 2016 Syzygy. All rights reserved.
 //
 
-#import "KLImagePickerViewModel.h"
+#import "KLPhotoLibrary.h"
 
-@interface KLImagePickerViewModel () <PHPhotoLibraryChangeObserver>
+@interface KLPhotoLibrary () <PHPhotoLibraryChangeObserver>
 
 @property (nonatomic, strong, readonly) PHPhotoLibrary *photoLibrary;
 @property (nonatomic, strong) NSMutableArray *assetCollectionArray;
 
 @end
 
-@implementation KLImagePickerViewModel
+@implementation KLPhotoLibrary
 
 - (void)checkAuthorization:(KLVoidBlockType)handler
 {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (PHAuthorizationStatusNotDetermined == status) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            // This callback is not on main thread.
             [self checkPhotoLibraryWithStatus:status handler:handler];
         }];
     } else {
@@ -33,18 +34,20 @@
 {
     NSParameterAssert(handler);
     
-    if (PHAuthorizationStatusAuthorized == status) {
-        [self fetchAssetCollections];
-    } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
-        handler();
-    }
+    KLDispatchMainAsync(^{
+        if (PHAuthorizationStatusAuthorized == status) {
+            [self fetchAssetCollections];
+        } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
+            handler();
+        }
+    });
 }
 
 #pragma mark - Lifecycle
 - (instancetype)init
 {
     if (self = [super init]) {
-        _assetCollections = [NSMutableArray array];
+        _assetCollectionArray = [NSMutableArray array];
         [self.photoLibrary registerChangeObserver:self];
     }
     return self;
@@ -67,10 +70,10 @@
 }
 
 #pragma mark - Public method
-- (void)setCurrentPageIndex:(NSUInteger)currentPageIndex
+- (void)setSelectedAssetCollectionIndex:(NSUInteger)selectedAssetCollectionIndex
 {
-    _currentPageIndex = currentPageIndex;
-    _selectedAssetCollection = self.assetCollections[currentPageIndex];
+    _selectedAssetCollectionIndex = selectedAssetCollectionIndex;
+    _selectedAssetCollection = self.assetCollections[selectedAssetCollectionIndex];
     [self.selectedAssetCollection fetchAssets];
 }
 

@@ -29,7 +29,7 @@
 #pragma mark - Tint color
 + (instancetype)tintColor
 {
-    return [UIColor colorWithRed:49/255.0 green:49/255.0 blue:49/255.0 alpha:1.0];
+    return KLColorWithRGB(49, 49, 49);
 }
 
 + (instancetype)barTintColor
@@ -40,28 +40,28 @@
 #pragma mark - Background color
 + (instancetype)backgroundColor
 {
-    return [UIColor colorWithRed:240/255.0 green:240/255.0 blue:244/255.0 alpha:1.0];   // 冷白
+    return KLColorWithRGB(240, 240, 244);  // 冷白
 }
 
 + (instancetype)darkBackgroundColor
 {
-    return [UIColor colorWithRed:40/255.0 green:40/255.0 blue:40/255.0 alpha:1.0];
+    return KLColorWithRGB(40, 40, 40);
 }
 
 #pragma mark - Text color
 + (instancetype)titleColor
 {
-    return [UIColor colorWithRed:55/255.0 green:60/255.0 blue:56/255.0 alpha:1.0];
+    return KLColorWithRGB(55, 60, 56);
 }
 
 + (instancetype)subtitleColor
 {
-    return [UIColor colorWithRed:145/255.0 green:152/255.0 blue:159/255.0 alpha:1.0];   // 银鼠
+    return KLColorWithRGB(145, 152, 159);  // 银鼠
 }
 
 + (instancetype)separatorColor
 {
-    return [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
+    return KLColorWithRGB(204, 204, 204);
 }
 
 #pragma mark - Button color
@@ -82,7 +82,7 @@
 
 + (instancetype)disabledButtonColor
 {
-    return [UIColor colorWithRed:219/255.0 green:219/255.0 blue:219/255.0 alpha:1.0];
+    return KLColorWithRGB(219, 219, 219);
 }
 
 + (instancetype)linkButtonColor

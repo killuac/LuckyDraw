@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KLImagePickerViewModel.h"
+#import "KLPhotoLibrary.h"
 
 @class KLImagePickerController;
 

@@ -171,6 +171,8 @@
 #pragma mark - Public method
 - (void)reloadData
 {
+    if (self.items.count == 0) return;
+    
     NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems].firstObject;
     [self.collectionView reloadData];
     [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];

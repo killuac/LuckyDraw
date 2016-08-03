@@ -12,7 +12,7 @@
 
 @interface KLImagePickerController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate, KLSegmentControlDelegate>
 
-@property (nonatomic, strong) KLImagePickerViewModel *viewModel;
+@property (nonatomic, strong) KLPhotoLibrary *photoLibrary;
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, strong) KLSegmentControl *segmentControl;
@@ -31,13 +31,13 @@
 #pragma mark - Life cycle
 + (instancetype)imagePickerController
 {
-    return [[self alloc] initWithViewModel:[KLImagePickerViewModel new]];
+    return [[self alloc] initWithPhotoLibrary:[KLPhotoLibrary new]];
 }
 
-- (instancetype)initWithViewModel:(id)viewModel
+- (instancetype)initWithPhotoLibrary:(KLPhotoLibrary *)photoLibrary
 {
     if (self = [super init]) {
-        _viewModel = viewModel;
+        _photoLibrary = photoLibrary;
     }
     return self;
 }
@@ -48,7 +48,7 @@
     [self prepareForUI];
     [self addObservers];
     
-    [self.viewModel checkAuthorization:^{
+    [self.photoLibrary checkAuthorization:^{
         [self showAlert];
     }];
 }
@@ -62,14 +62,14 @@
 - (void)addObservers
 {
     self.KVOController = [FBKVOController controllerWithObserver:self];
-    [self.KVOController observe:self.viewModel keyPath:NSStringFromSelector(@selector(assetCollections)) options:0 action:@selector(reloadData)];
+    [self.KVOController observe:self.photoLibrary keyPath:NSStringFromSelector(@selector(assetCollections)) options:0 action:@selector(reloadData)];
 }
 
 - (void)reloadData
 {
-    self.pageScrollView.scrollEnabled = self.viewModel.isPageScrollEnabled;
+    self.pageScrollView.scrollEnabled = self.photoLibrary.isPageScrollEnabled;
     
-    UIViewController *viewController = [self viewControllerAtPageIndex:self.viewModel.currentPageIndex];
+    UIViewController *viewController = [self viewControllerAtPageIndex:self.photoLibrary.selectedAssetCollectionIndex];
     if (viewController) {
         [self.pageViewController setViewControllers:@[viewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     } else if (self.pageViewController.childViewControllers.count) {
@@ -107,7 +107,7 @@
 
 - (void)addSubviews
 {
-    _segmentControl = [KLSegmentControl segmentControlWithItems:self.viewModel.collectionTitles];
+    _segmentControl = [KLSegmentControl segmentControlWithItems:self.photoLibrary.collectionTitles];
     _segmentControl.delegate = self;
     [self.view addSubview:_segmentControl];
     
@@ -164,9 +164,9 @@
 
 - (KLAlbumViewController *)viewControllerAtPageIndex:(NSUInteger)index
 {
-    if (self.viewModel.collectionCount == 0 || index >= self.viewModel.collectionCount) return nil;
+    if (self.photoLibrary.assetCollectionCount == 0 || index >= self.photoLibrary.assetCollectionCount) return nil;
     
-    KLAlbumViewController *albumVC = [KLAlbumViewController viewControllerWithPageIndex:index viewModel:self.viewModel];
+    KLAlbumViewController *albumVC = [KLAlbumViewController viewControllerWithPageIndex:index photoLibrary:self.photoLibrary];
     
     return albumVC;
 }

@@ -186,6 +186,8 @@
 
 - (void)longPressTakePhoto:(UILongPressGestureRecognizer *)recognizer
 {
+    if (recognizer.state != UIGestureRecognizerStateBegan) return;
+    
     UIView *view = recognizer.view;
     CGRect frame = CGRectMake(view.width/3, 0, view.width/3, view.height);
     if (!CGRectContainsPoint(frame, [recognizer locationInView:view])) return;

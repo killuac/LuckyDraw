@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class KLImagePickerViewModel;
+@class KLPhotoLibrary;
 
 @interface KLAlbumViewController : UICollectionViewController
 
-+ (instancetype)viewControllerWithPageIndex:(NSUInteger)pageIndex viewModel:(KLImagePickerViewModel *)viewModel;
++ (instancetype)viewControllerWithPageIndex:(NSUInteger)pageIndex photoLibrary:(KLPhotoLibrary *)photoLibrary;
 
 @property (nonatomic, assign, readonly) NSUInteger pageIndex;
 
