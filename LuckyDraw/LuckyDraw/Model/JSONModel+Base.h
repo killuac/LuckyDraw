@@ -6,7 +6,7 @@
 //  Copyright (c) 2016 Syzygy. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+@import JSONModel;
 #import "NSArray+Model.h"
 
 @interface JSONModel (Base)

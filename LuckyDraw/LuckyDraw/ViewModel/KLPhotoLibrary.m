@@ -32,8 +32,6 @@
 
 - (void)checkPhotoLibraryWithStatus:(NSInteger)status handler:(KLVoidBlockType)handler
 {
-    NSParameterAssert(handler);
-    
     KLDispatchMainAsync(^{
         if (PHAuthorizationStatusAuthorized == status) {
             [self fetchAssetCollections];

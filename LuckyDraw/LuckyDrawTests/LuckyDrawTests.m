@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KLUtilities.h"
 #import "KLPhotoLibrary.h"
 
 @interface LuckyDrawTests : XCTestCase
@@ -29,9 +30,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testPhotoLibrary
 {
-    
+    [self.photoLibrary checkAuthorization:nil];
+    XCTAssertGreaterThan(self.photoLibrary.assetCollectionCount, 0);
+    XCTAssertNotNil([self.photoLibrary assetAtIndex:0]);
 }
 
 - (void)testPerformanceExample {

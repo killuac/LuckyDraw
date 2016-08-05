@@ -6,7 +6,6 @@ target 'LuckyDraw' do
 
 pod 'Aspects'
 pod 'JSONModel'
-pod 'NYXImagesKit'
 pod 'KVOController'
 pod 'RegExCategories'
 pod 'UMengAnalytics-NO-IDFA'
