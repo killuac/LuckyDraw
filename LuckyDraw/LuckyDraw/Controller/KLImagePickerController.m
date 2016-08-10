@@ -78,6 +78,7 @@
         [self.pageViewController.childViewControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
     }
     
+    self.segmentControl.items = self.photoLibrary.assetCollectionTitles;
     [self.segmentControl reloadData];
 }
 
@@ -107,7 +108,7 @@
 
 - (void)addSubviews
 {
-    _segmentControl = [KLSegmentControl segmentControlWithItems:self.photoLibrary.collectionTitles];
+    _segmentControl = [KLSegmentControl segmentControlWithItems:nil];
     _segmentControl.delegate = self;
     [self.view addSubview:_segmentControl];
     
@@ -182,6 +183,7 @@
 {
     KLAlbumViewController *albumVC = self.pageViewController.viewControllers.firstObject;
     [self.segmentControl selectSegmentAtIndex:albumVC.pageIndex];
+    self.photoLibrary.selectedAssetCollectionIndex = albumVC.pageIndex;
 }
 
 #pragma mark - Segment control delegate
@@ -192,6 +194,7 @@
     UIPageViewControllerNavigationDirection direction = (albumVC.pageIndex < index) ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
     
     self.pageScrollView.delegate = nil;
+    self.photoLibrary.selectedAssetCollectionIndex = index;
     [self.pageViewController setViewControllers:@[[self viewControllerAtPageIndex:index]] direction:direction animated:YES completion:^(BOOL finished) {
         welf.pageScrollView.delegate = welf;
     }];

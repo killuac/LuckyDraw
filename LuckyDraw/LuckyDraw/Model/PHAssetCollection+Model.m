@@ -21,7 +21,7 @@
     if (!results) {
         PHFetchOptions *options = [[PHFetchOptions alloc] init];
         options.predicate = [NSPredicate predicateWithFormat:@"mediaType = %i", PHAssetMediaTypeImage];
-        options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+        options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(creationDate)) ascending:NO]];
         results = [PHAsset fetchAssetsInAssetCollection:self options:options];
     }
     return results;
@@ -48,9 +48,9 @@
 
 - (void)setAssets:(NSArray<PHAsset *> *)assets
 {
-    [self willChangeValueForKey:@"assets"];
+    [self willChangeValueForKey:NSStringFromSelector(@selector(assets))];
     objc_setAssociatedObject(self, @selector(assets), assets, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self didChangeValueForKey:@"assets"];
+    [self didChangeValueForKey:NSStringFromSelector(@selector(assets))];
 }
 
 - (NSArray<PHAsset *> *)assets

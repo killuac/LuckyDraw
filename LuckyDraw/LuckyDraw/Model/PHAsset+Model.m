@@ -12,13 +12,13 @@
 
 - (void)thumbnailImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(KLAssetBlockType)resultHandler
 {
-    NSParameterAssert(!resultHandler);
+    NSParameterAssert(resultHandler);
     [self requestImageWithSize:CGSizeMake(SCREEN_WIDTH/5, SCREEN_HEIGHT/5) progressHandler:progressHandler resultHandler:resultHandler];
 }
 
 - (void)originalImageProgressHandler:(PHAssetImageProgressHandler)progressHandler resultHandler:(KLAssetBlockType)resultHandler
 {
-    NSParameterAssert(!resultHandler);
+    NSParameterAssert(resultHandler);
     [self requestImageWithSize:PHImageManagerMaximumSize progressHandler:progressHandler resultHandler:resultHandler];
 }
 

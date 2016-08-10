@@ -12,7 +12,7 @@
 @interface KLPhotoLibrary : NSObject
 
 @property (nonatomic, strong, readonly) NSArray<PHAssetCollection *> *assetCollections;
-@property (nonatomic, strong, readonly) NSArray<NSString *> *collectionTitles;
+@property (nonatomic, strong, readonly) NSArray<NSString *> *assetCollectionTitles;
 
 @property (nonatomic, assign) NSUInteger selectedAssetCollectionIndex;
 @property (nonatomic, strong, readonly) PHAssetCollection *selectedAssetCollection;

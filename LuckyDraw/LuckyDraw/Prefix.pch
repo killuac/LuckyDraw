@@ -13,7 +13,6 @@
 @import ObjectiveC;
 
 @import Aspects;
-@import KVOController;
 
 #import "KLUtilities.h"
 #import "KLSoundPlayer.h"
@@ -39,5 +38,6 @@
 
 #import "JSONModel+Base.h"
 #import <UMMobClick/MobClick.h>
+#import <KVOController/KVOController.h>
 
 #endif

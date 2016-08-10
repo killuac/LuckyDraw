@@ -32,13 +32,15 @@
 
 - (void)checkPhotoLibraryWithStatus:(NSInteger)status handler:(KLVoidBlockType)handler
 {
-    KLDispatchMainAsync(^{
+    dispatch_block_t block = ^{
         if (PHAuthorizationStatusAuthorized == status) {
             [self fetchAssetCollections];
         } else if (PHAuthorizationStatusDenied == status || PHAuthorizationStatusAuthorized == status) {
             handler();
         }
-    });
+    };
+    
+    [NSThread isMainThread] ? block() : KLDispatchMainAsync(block);
 }
 
 #pragma mark - Lifecycle
@@ -61,6 +63,12 @@
     [self.photoLibrary unregisterChangeObserver:self];
 }
 
+- (void)setAssetCollections:(NSArray<PHAssetCollection *> *)assetCollections
+{
+    _assetCollections = assetCollections;
+    [self fetchSelectedAssetCollectionAssets];
+}
+
 #pragma mark - PHPhotoLibraryChangeObserver
 - (void)photoLibraryDidChange:(PHChange *)changeInstance
 {
@@ -68,11 +76,25 @@
 }
 
 #pragma mark - Public method
+- (NSArray<NSString *> *)assetCollectionTitles
+{
+    return [self.assetCollections valueForKeyPath:@"@unionOfObjects.localizedTitle"];
+}
+
+- (NSUInteger)assetCollectionCount
+{
+    return self.assetCollections.count;
+}
+
+- (BOOL)isPageScrollEnabled
+{
+    return self.assetCollectionCount > 0;
+}
+
 - (void)setSelectedAssetCollectionIndex:(NSUInteger)selectedAssetCollectionIndex
 {
     _selectedAssetCollectionIndex = selectedAssetCollectionIndex;
-    _selectedAssetCollection = self.assetCollections[selectedAssetCollectionIndex];
-    [self.selectedAssetCollection fetchAssets];
+    [self fetchSelectedAssetCollectionAssets];
 }
 
 - (NSUInteger)selectedCollectionAssetCount
@@ -88,17 +110,18 @@
     
     [self fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum options:options inGCDGroup:group];
     [self fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum options:options inGCDGroup:group];
+    [self fetchAssetCollectionsWithType:PHAssetCollectionTypeMoment options:options inGCDGroup:group];
     
     KLDispatchGroupMainNotify(group, ^{
-        [self.assetCollectionArray sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"assetCount" ascending:NO]]];
-        _assetCollections = self.assetCollectionArray;
+        [self.assetCollectionArray sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(assetCount)) ascending:NO]]];
+        self.assetCollections = self.assetCollectionArray;
     });
 }
 
 - (void)fetchAssetCollectionsWithType:(PHAssetCollectionType)type options:(PHFetchOptions *)options inGCDGroup:(dispatch_group_t)group
 {
     KLDispatchGroupGlobalAsync(group, ^{
-        PHFetchResult *results = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAny options:options];
+        PHFetchResult *results = [PHAssetCollection fetchAssetCollectionsWithType:type subtype:PHAssetCollectionSubtypeAny options:options];
         [results enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([self isCoveredForSubtype:collection.assetCollectionSubtype]) {
                 @synchronized (self) {
@@ -108,6 +131,12 @@
             }
         }];
     });
+}
+
+- (void)fetchSelectedAssetCollectionAssets
+{
+    _selectedAssetCollection = self.assetCollections[self.selectedAssetCollectionIndex];
+    [self.selectedAssetCollection fetchAssets];
 }
 
 - (PHAsset *)assetAtIndex:(NSUInteger)index
